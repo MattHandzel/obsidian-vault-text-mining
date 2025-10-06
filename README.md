@@ -2,7 +2,7 @@
 
 Simple pipeline that walks a portion of an Obsidian vault (defaults to `~/notes/dailies`), sends chunks of the notes to a local Ollama model, and aggregates the returned persona facts into `output/profile.json`.
 
-```mermaid.js
+```mermaid
 flowchart LR
   A[Scan notes: notes/dailies] --> B{Filter}
   B -->|.md + min words + max files| C[Chunk notes]
@@ -24,7 +24,7 @@ flowchart LR
 
 ```bash
 cd /home/matth/Projects/SelfKnowledgeExtraction
-nix-shell
+# nix-shell # if you have nix installed
 python -m self_extract.cli init-config  # creates config.yaml
 # edit config.yaml if needed (e.g. different ollama host or folder limit)
 python -m self_extract.cli run -c config.yaml
