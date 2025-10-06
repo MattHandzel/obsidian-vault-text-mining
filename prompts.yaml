@@ -1,0 +1,65 @@
+extraction: |
+  You are analyzing personal writing to extract structured persona evidence about the AUTHOR of the text.
+
+  Rules:
+  - Only use information explicitly grounded in the provided text; do not invent facts.
+  - Skip generic statements that could apply to anyone.
+  - Always output valid JSON with no extra commentary.
+  - The author is "I" or "me", you are reading their journal entries.
+  - Extract information in the first person. Do not say "the author"
+  - Each extracted entity needs to be atomic and understood on its own, replace pronouns, remove ambiguities.
+  - Put everything in the past tense, do not generalize a one-off action into a habit unless the text frames it as recurring.
+  - Maintain the ambiguity of the original text
+  - Replace pronouns with explicit nouns in the text 
+  - Each item must stand alone and express one idea. If a sentence includes multiple facts, split them across items while maintain proper context.
+
+
+  Extraction targets (each list must be present in the JSON response; use [] when nothing is found):
+  {{EXTRACTION_TARGETS}}
+
+  Source file: {{SOURCE}}
+
+  Text:
+  ```
+  {{TEXT}}
+  ```
+
+  Return JSON with exactly this schema (omit all other keys, use [] for empty lists):
+  {{JSON_SCHEMA}}
+
+  Every list entry must be an object with exactly these keys:
+  {
+    "value": str,          # concise statement of the extraction
+    "evidence": str        # short quote DIRECTLY from the text
+  }
+
+cluster: |
+  You consolidate persona evidence from personal journal entries.
+  Bucket: {{BUCKET}}
+  Pass: {{PASS}}
+  {{CONTEXT_SECTION}}
+  Entries are JSON objects with `value`, optional `last_edited_date` (YYYY-MM-DD), `source`, `evidence`, and `governance`.
+  Combine statements that mean the same thing. When items conflict, prefer the newest by `last_edited_date`.
+  Rewrite lightly for clarity but keep the author's voice.
+  Return ONLY JSON of the form: {"text": str, "last_edited_date": str|null}.
+  If nothing reliable remains, return {"text": "", "last_edited_date": null}.
+  Entries:
+  {{ENTRIES}}
+
+summary: |
+  Create a concise summary of the author's persona for the specified bucket.
+  Bucket: {{BUCKET}}
+  Pass: {{PASS}}
+  {{CONTEXT_SECTION}}
+  You receive canonical facts with optional `last_edited_date` metadata.
+  Return ONLY JSON of the form {"summary": str}.
+  Facts:
+  {{FACTS}}
+
+global_context: |
+  You are preparing a long-form context summary that future aggregation passes will reference.
+  Aggregate every bucket's canonical facts to capture the author's situation, goals, traits, and recent developments.
+  The summary should be exhaustive yet coherent so that another model can rely on it when refining facts.
+  Return ONLY JSON of the form {"context": str}.
+  Canonical persona data (JSON):
+  {{CANONICAL}}

@@ -1,0 +1,49 @@
+vault_path: "~/notes"
+target_folder: "dailies"
+input_paths:
+  - dailies
+filters:
+  file_extensions: [".md"]
+  min_word_count: 50
+  max_files: 10
+ollama:
+  base_url: "http://127.0.0.1:11434"
+  model: "gemma3:4b-it-qat"
+  aggregator_model: "gemma3:12-it-qat"
+  embedding_model: "nomic-embed-text"
+aggregation:
+  similarity_threshold: 0.82
+  embedding_batch_size: 32
+  summary_max_items: 12
+  enable_clustering: true
+  passes: 1
+  global_context: false
+  enabled: true
+prompts_path: "prompts.yaml"
+extraction_targets:
+  - name: facts
+    description: Verifiable statements about the author.
+  - name: values
+    description: Principles or priorities the author explicitly states.
+  - name: interests
+    description: Topics or activities the author enjoys or pursues.
+  - name: skills
+    description: Abilities the author claims or demonstrates.
+  - name: goals
+    description: Specific objectives the author is working toward.
+  - name: habits
+    description: Repeated behaviors or routines mentioned.
+  - name: beliefs
+    description: Core beliefs or worldview statements.
+  - name: personality_traits
+    description: Adjectives describing the author's character.
+  - name: tone
+    description: Tone or mood of the author's writing.
+  - name: emotions
+    description: Emotions the author states or implies.
+  - name: projects
+    description: Named projects or initiatives the author works on.
+  - name: other_insights
+    description: Notable insights that don't fit other categories.
+output_json: "output/profile.json"
+cache_path: "output/cache.json"
