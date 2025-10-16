@@ -3,7 +3,8 @@ from __future__ import annotations
 import os
 from datetime import date
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, Iterable, List, Optional, Tuple
+from urllib.parse import urlparse
 
 try:
     import typer
@@ -159,6 +160,93 @@ except ImportError:  # pragma: no cover - fallback to stdlib
     Console = _PlainConsole  # type: ignore[assignment]
     Table = _PlainTable  # type: ignore[assignment]
 
+
+_ENV_FILE_LOADED = False
+
+
+def _iter_env_assignments(env_path: Path) -> Iterable[Tuple[str, str]]:
+    """Yield key/value pairs parsed from a .env-style file."""
+
+    try:
+        contents = env_path.read_text(encoding="utf-8")
+    except OSError:
+        return []
+
+    pairs: List[Tuple[str, str]] = []
+    for raw_line in contents.splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.lower().startswith("export"):
+            line = line[6:].strip()
+        if "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        if not key:
+            continue
+        value = value.strip()
+        if value and value[0] == value[-1] and value[0] in {'"', "'"}:
+            value = value[1:-1]
+        value = os.path.expandvars(os.path.expanduser(value))
+        pairs.append((key, value))
+    return pairs
+
+
+def _load_env_file() -> None:
+    """Populate os.environ from a .env file before Typer parses CLI options."""
+
+    global _ENV_FILE_LOADED
+    if _ENV_FILE_LOADED:
+        return
+
+    env_hint = os.getenv("SELF_EXTRACT_ENV_FILE")
+    candidates: List[Path] = []
+    if env_hint:
+        candidates.append(Path(env_hint).expanduser())
+    candidates.append(Path.cwd() / ".env")
+    # Fall back to the project root if run from a subdirectory.
+    candidates.append(Path(__file__).resolve().parent.parent / ".env")
+
+    for candidate in candidates:
+        if not candidate.exists() or not candidate.is_file():
+            continue
+        for key, value in _iter_env_assignments(candidate):
+            os.environ.setdefault(key, value)
+        break
+
+    _ENV_FILE_LOADED = True
+
+
+def _apply_env_aliases() -> None:
+    """Support legacy .env keys by mapping them onto expected names."""
+
+    alias_pairs: Tuple[Tuple[str, str], ...] = (
+        ("GOOGLE_CLIENT_ID", "CONTEXT_AUTH_CLIENT_ID"),
+        ("GOOGLE_CLIENT_SECRET", "CONTEXT_AUTH_CLIENT_SECRET"),
+    )
+    for source, target in alias_pairs:
+        value = os.getenv(source)
+        if value and not os.getenv(target):
+            os.environ[target] = value
+
+    redirect = os.getenv("OAUTH_REDIRECT_URI")
+    if redirect:
+        parsed = urlparse(redirect)
+        origin = f"{parsed.scheme}://{parsed.netloc}" if parsed.scheme and parsed.netloc else ""
+        if origin and not os.getenv("CONTEXT_AUTH_BASE_URL"):
+            os.environ["CONTEXT_AUTH_BASE_URL"] = origin
+        path = parsed.path or "/auth/callback"
+        if not os.getenv("CONTEXT_AUTH_REDIRECT_PATH"):
+            os.environ["CONTEXT_AUTH_REDIRECT_PATH"] = path
+        # Allow direct reuse of the redirect URI list if no explicit entries.
+        if not os.getenv("CONTEXT_AUTH_ALLOWED_REDIRECTS"):
+            os.environ["CONTEXT_AUTH_ALLOWED_REDIRECTS"] = redirect
+
+
+_load_env_file()
+_apply_env_aliases()
+
 from .context_server.auth import OAuthProxySettings, build_oauth_proxy
 from .profile_query import (
     filter_aggregated,
@@ -313,13 +401,16 @@ def _parse_assignments(values: List[str], option_name: str) -> Dict[str, str]:
         if "=" not in raw:
             raise typer.BadParameter(
                 f"Expected KEY=VALUE pairs, received '{raw}'",
-                option_name=option_name,
+                param_hint=[option_name],
             )
         key, value = raw.split("=", 1)
         key = key.strip()
         value = value.strip()
         if not key:
-            raise typer.BadParameter("Missing key in assignment", option_name=option_name)
+            raise typer.BadParameter(
+                "Missing key in assignment",
+                param_hint=[option_name],
+            )
         assignments[key] = value
     return assignments
 
@@ -460,7 +551,7 @@ def context_serve(
     if auth_type_normalized not in {"none", "oauth-proxy"}:
         raise typer.BadParameter(
             "Unsupported auth type. Choose from: none, oauth-proxy",
-            option_name="--auth-type",
+            param_hint=["--auth-type"],
         )
 
     auth_allowed_redirect = _merge_env_list(auth_allowed_redirect, "CONTEXT_AUTH_ALLOWED_REDIRECTS")
@@ -483,7 +574,7 @@ def context_serve(
         if missing:
             raise typer.BadParameter(
                 f"Missing required OAuth settings: {', '.join(missing)}",
-                option_name="--auth-type",
+                param_hint=["--auth-type"],
             )
 
         authorize_params = _parse_assignments(auth_authorize_param, "--auth-authorize-param")
