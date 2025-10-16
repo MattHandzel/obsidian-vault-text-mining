@@ -97,6 +97,36 @@ docker run --rm \
 
 Adjust the bind mounts if your profile or rule files live elsewhere. Additional CLI flags (e.g. `--embedding-model`) work the same way; append them to the end of the `docker run` command.
 
+## OAuth Proxy Authentication
+
+Secure the MCP endpoint with OAuth by enabling FastMCP's OAuth Proxy integration. Register an application with your provider (GitHub, Google, Azure AD, etc.), note the authorization and token endpoints, and configure a redirect URI that matches your public server URL plus the callback path (defaults to `/auth/callback`). Then export the credentials and launch the server with `--auth-type oauth-proxy`:
+
+```bash
+export CONTEXT_AUTH_BASE_URL="https://your-server.com"
+export CONTEXT_AUTH_CLIENT_ID="abc123"
+export CONTEXT_AUTH_CLIENT_SECRET="super-secret"
+export CONTEXT_AUTH_AUTHORIZATION_ENDPOINT="https://provider.com/oauth/authorize"
+export CONTEXT_AUTH_TOKEN_ENDPOINT="https://provider.com/oauth/token"
+export CONTEXT_AUTH_JWKS_URI="https://provider.com/.well-known/jwks.json"
+export CONTEXT_AUTH_ISSUER="https://provider.com/"
+export CONTEXT_AUTH_AUDIENCE="your-api-id"
+
+python -m self_extract.cli context serve \
+  --transport http \
+  --host 0.0.0.0 \
+  --port 47771 \
+  --auth-type oauth-proxy
+```
+
+Optional environment variables fine-tune the proxy:
+
+- `CONTEXT_AUTH_REDIRECT_PATH`: override the callback path (defaults to `/auth/callback`)
+- `CONTEXT_AUTH_ALLOWED_REDIRECTS`: comma-separated patterns to restrict MCP client redirect URIs (e.g. `http://localhost:*,https://claude.ai/*`)
+- `CONTEXT_AUTH_REQUIRED_SCOPES`: scopes that must appear on provider tokens (comma-separated)
+- `CONTEXT_AUTH_VALID_SCOPES`: scopes to advertise through the MCP discovery endpoints
+
+You can also append CLI flags such as `--auth-authorize-param audience=https://api.example.com` or `--auth-token-param resource=https://api.example.com` to forward provider-specific parameters. Disable PKCE forwarding when required with `--no-auth-forward-pkce`, or set a specific token endpoint auth method via `--auth-token-endpoint-method client_secret_post`.
+
 ## Configuration
 
 `config.yaml` keys:

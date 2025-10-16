@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 from datetime import date
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -158,6 +159,7 @@ except ImportError:  # pragma: no cover - fallback to stdlib
     Console = _PlainConsole  # type: ignore[assignment]
     Table = _PlainTable  # type: ignore[assignment]
 
+from .context_server.auth import OAuthProxySettings, build_oauth_proxy
 from .profile_query import (
     filter_aggregated,
     filter_raw,
@@ -303,6 +305,39 @@ def query(
         console.print(f"Found {len(raw_entries)} raw matches.")
 
 
+def _parse_assignments(values: List[str], option_name: str) -> Dict[str, str]:
+    """Parse key=value assignments supplied via CLI options."""
+
+    assignments: Dict[str, str] = {}
+    for raw in values:
+        if "=" not in raw:
+            raise typer.BadParameter(
+                f"Expected KEY=VALUE pairs, received '{raw}'",
+                option_name=option_name,
+            )
+        key, value = raw.split("=", 1)
+        key = key.strip()
+        value = value.strip()
+        if not key:
+            raise typer.BadParameter("Missing key in assignment", option_name=option_name)
+        assignments[key] = value
+    return assignments
+
+
+def _merge_env_list(values: List[str], env_var: str) -> List[str]:
+    """Include comma-separated entries from an environment variable if set."""
+
+    env_value = os.getenv(env_var)
+    if not env_value:
+        return values
+    merged = list(values)
+    for item in env_value.split(","):
+        candidate = item.strip()
+        if candidate and candidate not in merged:
+            merged.append(candidate)
+    return merged
+
+
 @context_app.command("serve")
 def context_serve(
     profile: Path = typer.Option(Path("output/profile-all.json"), "--profile", "-p"),
@@ -318,6 +353,102 @@ def context_serve(
     path: str = typer.Option("/mcp", "--path", help="HTTP path when using http transport."),
     embedding_model: str = typer.Option("all-MiniLM-L6-v2", "--embedding-model"),
     embedding_device: Optional[str] = typer.Option(None, "--embedding-device"),
+    auth_type: str = typer.Option(
+        "none",
+        "--auth-type",
+        help="Authentication provider to protect the MCP server (none, oauth-proxy).",
+        case_sensitive=False,
+    ),
+    auth_base_url: Optional[str] = typer.Option(
+        None,
+        "--auth-base-url",
+        help="Public base URL for the MCP server when using OAuth Proxy.",
+        envvar="CONTEXT_AUTH_BASE_URL",
+    ),
+    auth_client_id: Optional[str] = typer.Option(
+        None,
+        "--auth-client-id",
+        help="OAuth client ID registered with the upstream provider.",
+        envvar="CONTEXT_AUTH_CLIENT_ID",
+    ),
+    auth_client_secret: Optional[str] = typer.Option(
+        None,
+        "--auth-client-secret",
+        help="OAuth client secret registered with the upstream provider.",
+        envvar="CONTEXT_AUTH_CLIENT_SECRET",
+    ),
+    auth_authorization_endpoint: Optional[str] = typer.Option(
+        None,
+        "--auth-authorization-endpoint",
+        help="Upstream provider authorization endpoint URL.",
+        envvar="CONTEXT_AUTH_AUTHORIZATION_ENDPOINT",
+    ),
+    auth_token_endpoint: Optional[str] = typer.Option(
+        None,
+        "--auth-token-endpoint",
+        help="Upstream provider token endpoint URL.",
+        envvar="CONTEXT_AUTH_TOKEN_ENDPOINT",
+    ),
+    auth_jwks_uri: Optional[str] = typer.Option(
+        None,
+        "--auth-jwks-uri",
+        help="JWKS URI used to validate upstream tokens.",
+        envvar="CONTEXT_AUTH_JWKS_URI",
+    ),
+    auth_issuer: Optional[str] = typer.Option(
+        None,
+        "--auth-issuer",
+        help="Token issuer expected from the upstream provider.",
+        envvar="CONTEXT_AUTH_ISSUER",
+    ),
+    auth_audience: Optional[str] = typer.Option(
+        None,
+        "--auth-audience",
+        help="Audience claim required on upstream tokens.",
+        envvar="CONTEXT_AUTH_AUDIENCE",
+    ),
+    auth_redirect_path: Optional[str] = typer.Option(
+        None,
+        "--auth-redirect-path",
+        help="Callback path to register with the upstream provider (default /auth/callback).",
+        envvar="CONTEXT_AUTH_REDIRECT_PATH",
+    ),
+    auth_allowed_redirect: List[str] = typer.Option(
+        [],
+        "--auth-allowed-redirect",
+        help="Allowed wildcard patterns for MCP client redirect URIs.",
+    ),
+    auth_forward_pkce: bool = typer.Option(
+        True,
+        "--auth-forward-pkce/--no-auth-forward-pkce",
+        help="Forward PKCE challenges when proxying authorization requests.",
+    ),
+    auth_token_endpoint_method: Optional[str] = typer.Option(
+        None,
+        "--auth-token-endpoint-method",
+        help="Authentication method for the upstream token endpoint (client_secret_basic, client_secret_post, none).",
+        envvar="CONTEXT_AUTH_TOKEN_ENDPOINT_METHOD",
+    ),
+    auth_authorize_param: List[str] = typer.Option(
+        [],
+        "--auth-authorize-param",
+        help="Extra KEY=VALUE parameters to forward to the upstream authorization endpoint.",
+    ),
+    auth_token_param: List[str] = typer.Option(
+        [],
+        "--auth-token-param",
+        help="Extra KEY=VALUE parameters to forward to the upstream token endpoint.",
+    ),
+    auth_required_scope: List[str] = typer.Option(
+        [],
+        "--auth-required-scope",
+        help="Scopes that must be present on upstream tokens.",
+    ),
+    auth_valid_scope: List[str] = typer.Option(
+        [],
+        "--auth-valid-scope",
+        help="Scopes advertised to MCP clients via the OAuth metadata endpoints.",
+    ),
 ) -> None:
     """Start the MCP server for LLM integrations."""
 
@@ -325,11 +456,65 @@ def context_serve(
     rules = Path(rules)
     from .context_server.mcp import ContextMCPServer
 
+    auth_type_normalized = auth_type.lower()
+    if auth_type_normalized not in {"none", "oauth-proxy"}:
+        raise typer.BadParameter(
+            "Unsupported auth type. Choose from: none, oauth-proxy",
+            option_name="--auth-type",
+        )
+
+    auth_allowed_redirect = _merge_env_list(auth_allowed_redirect, "CONTEXT_AUTH_ALLOWED_REDIRECTS")
+    auth_required_scope = _merge_env_list(auth_required_scope, "CONTEXT_AUTH_REQUIRED_SCOPES")
+    auth_valid_scope = _merge_env_list(auth_valid_scope, "CONTEXT_AUTH_VALID_SCOPES")
+
+    auth_provider = None
+    if auth_type_normalized == "oauth-proxy":
+        required_fields = {
+            "--auth-base-url": auth_base_url,
+            "--auth-client-id": auth_client_id,
+            "--auth-client-secret": auth_client_secret,
+            "--auth-authorization-endpoint": auth_authorization_endpoint,
+            "--auth-token-endpoint": auth_token_endpoint,
+            "--auth-jwks-uri": auth_jwks_uri,
+            "--auth-issuer": auth_issuer,
+            "--auth-audience": auth_audience,
+        }
+        missing = [name for name, value in required_fields.items() if not value]
+        if missing:
+            raise typer.BadParameter(
+                f"Missing required OAuth settings: {', '.join(missing)}",
+                option_name="--auth-type",
+            )
+
+        authorize_params = _parse_assignments(auth_authorize_param, "--auth-authorize-param")
+        token_params = _parse_assignments(auth_token_param, "--auth-token-param")
+
+        settings = OAuthProxySettings(
+            upstream_authorization_endpoint=auth_authorization_endpoint or "",
+            upstream_token_endpoint=auth_token_endpoint or "",
+            upstream_client_id=auth_client_id or "",
+            upstream_client_secret=auth_client_secret or "",
+            base_url=auth_base_url or "",
+            jwks_uri=auth_jwks_uri or "",
+            issuer=auth_issuer or "",
+            audience=auth_audience or "",
+            redirect_path=auth_redirect_path,
+            allowed_client_redirect_uris=auth_allowed_redirect or None,
+            forward_pkce=auth_forward_pkce,
+            token_endpoint_auth_method=auth_token_endpoint_method,
+            extra_authorize_params=authorize_params,
+            extra_token_params=token_params,
+            required_scopes=auth_required_scope or None,
+            valid_scopes=auth_valid_scope or None,
+        )
+        auth_provider = build_oauth_proxy(settings)
+
     server = ContextMCPServer(
         profile_path=profile,
         rules_path=rules,
         embedding_model=embedding_model,
         embedding_device=embedding_device,
+        auth=auth_provider,
     )
     run_kwargs: Dict[str, Any] = {"transport": transport.lower()}
     if run_kwargs["transport"] in {"http", "sse"}:

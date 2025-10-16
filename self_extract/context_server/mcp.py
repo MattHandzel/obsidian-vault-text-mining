@@ -13,6 +13,7 @@ except ImportError:  # pragma: no cover - optional dependency
             __import__("builtins").print(*args)
 
 from fastmcp import FastMCP
+from fastmcp.server.auth import AuthProvider
 
 from .service import PersonalContextService, PersonalContextResponse
 from .search import SearchRequest
@@ -29,6 +30,7 @@ class ContextMCPServer:
         embedding_model: str = "all-MiniLM-L6-v2",
         embedding_device: Optional[str] = None,
         server_name: str = "Personal Context Server",
+        auth: Optional[AuthProvider] = None,
     ) -> None:
         self._console = Console()
         self._service = PersonalContextService(
@@ -37,7 +39,8 @@ class ContextMCPServer:
             embedding_model=embedding_model,
             embedding_device=embedding_device,
         )
-        self._mcp = FastMCP(name=server_name)
+        self._auth = auth
+        self._mcp = FastMCP(name=server_name, auth=auth)
         self._register_tools()
 
     def _register_tools(self) -> None:
@@ -120,6 +123,8 @@ class ContextMCPServer:
         self._console.print(
             f"[green]Context MCP server running via FastMCP on[/green] {' '.join(location)}"
         )
+        if self._auth is not None:
+            self._console.print("[cyan]OAuth Proxy authentication enabled[/cyan]")
         self._mcp.run(transport=transport, **run_kwargs)
 
 
@@ -148,4 +153,3 @@ def _response_to_dict(response: PersonalContextResponse) -> Dict[str, Any]:
             "blocked_by_sensitive": response.audit.blocked_by_sensitive,
         },
     }
-
