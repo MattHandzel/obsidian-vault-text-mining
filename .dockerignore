@@ -1,0 +1,22 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Environments
+.venv/
+.env
+
+# VCS
+.git
+.gitignore
+
+# Project outputs
+output/
+
+# Misc
+.idea/
+.vscode/
+.DS_Store

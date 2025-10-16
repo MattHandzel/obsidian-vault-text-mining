@@ -71,6 +71,32 @@ The Personal Context Server exposes the consolidated profile to local LLM agents
 
 The CLI also exposes `python -m self_extract.cli context search "query"` for quick checks. All commands run offline by default and reuse the `sentence-transformers` model specified via `--embedding-model`.
 
+## Docker Context Server
+
+Build a container image when you want to serve the MCP endpoint without managing a local Python environment:
+
+```bash
+docker build -t self-extract-context .
+```
+
+The server needs your aggregated profile and rule set; mount them into the container and publish the transport port when you launch it. The example below serves HTTP on `0.0.0.0:47771` using the defaults shipped in this repository:
+
+```bash
+docker run --rm \
+  -p 47771:47771 \
+  -v "$(pwd)/output:/app/output" \
+  -v "$(pwd)/context-rules.json:/app/context-rules.json:ro" \
+  self-extract-context \
+  python -m self_extract.cli context serve \
+    --profile output/profile-all.json \
+    --rules context-rules.json \
+    --transport http \
+    --host 0.0.0.0 \
+    --port 47771
+```
+
+Adjust the bind mounts if your profile or rule files live elsewhere. Additional CLI flags (e.g. `--embedding-model`) work the same way; append them to the end of the `docker run` command.
+
 ## Configuration
 
 `config.yaml` keys:
