@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "generated_at": "2024-01-01T00:00:00Z"
+  },
+  "facts": [
+    {
+      "id": "fact-1",
+      "title": "Works on Self Knowledge Extraction project",
+      "summary": "Primary maintainer of the self-extract pipeline and context server modules.",
+      "details": "Owns the roadmap for the personal context server MVP.",
+      "domain": "project",
+      "tags": ["project", "work"],
+      "sensitivity": {"level": "public", "reasons": []},
+      "source": {"path": "notes/projects/self-extract.md", "bucket": "goals"},
+      "last_updated": "2024-05-01",
+      "embedding": [0.12, 0.24, 0.08, 0.11, 0.03, 0.09, 0.18, 0.05],
+      "attributes": {"mentions": 5}
+    },
+    {
+      "id": "fact-2",
+      "title": "Enjoys trail running",
+      "summary": "Runs local trail routes twice per week and tracks progress.",
+      "details": "Planning a 25km race in autumn.",
+      "domain": "personal",
+      "tags": ["hobbies", "fitness", "private"],
+      "sensitivity": {"level": "personal", "reasons": ["private"]},
+      "source": {"path": "notes/dailies/2024-04-10.md", "bucket": "habits"},
+      "last_updated": "2024-04-10",
+      "embedding": [0.05, 0.11, 0.2, 0.04, 0.09, 0.02, 0.14, 0.07],
+      "attributes": {"mentions": 3}
+    }
+  ]
+}

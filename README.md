@@ -39,6 +39,38 @@ python -m self_extract.cli query --profile output/profile.json --bucket goals --
 
 The run command processes the first N markdown files (default 10) in `~/notes/dailies`, skipping notes shorter than 50 words. Results go to `output/profile.json` (bucket objects with canonical `items`, `summary`, and optional `_global_context`) and a per-chunk log in `output/profile.runs.jsonl`.
 
+## Personal Context Server
+
+The Personal Context Server exposes the consolidated profile to local LLM agents via the Model Context Protocol (MCP) and provides a terminal UI for managing sharing rules.
+
+1. Build the context database (computes embeddings) from the latest aggregated profile:
+
+   ```bash
+   python -m self_extract.cli context build-profile \
+     --aggregated output/profile.json \
+     --output output/profile-all.json
+   ```
+
+2. (Optional) Seed rules from `context-rules.example.json`:
+
+   ```bash
+   cp context-rules.example.json context-rules.json
+   ```
+
+3. Launch the MCP server for downstream tools:
+
+   ```bash
+   python -m self_extract.cli context serve --profile output/profile-all.json --rules context-rules.json
+   ```
+
+4. Inspect and edit rules in the TUI:
+
+   ```bash
+   python -m self_extract.cli context tui --profile output/profile-all.json --rules context-rules.json
+   ```
+
+The CLI also exposes `python -m self_extract.cli context search "query"` for quick checks. All commands run offline by default and reuse the `sentence-transformers` model specified via `--embedding-model`.
+
 ## Configuration
 
 `config.yaml` keys:

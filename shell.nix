@@ -9,6 +9,7 @@ let
     ps.tqdm
     ps."python-frontmatter"
     ps.numpy
+    ps.textual
   ]);
 in
 pkgs.mkShell {
