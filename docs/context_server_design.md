@@ -22,7 +22,7 @@
 - Runs after rule engine; flagged items forced to `blocked` and annotated with reasons. Audit view draws from this classifier cache.
 
 ## MCP server
-- Async `ContextMCPServer` implementing minimal Model Context Protocol over JSON-RPC via websockets or stdin/stdout (configurable). Tools:
+- FastMCP-powered `ContextMCPServer` exposing the Personal Context service over stdio, HTTP, or SSE transports. Tools:
   - `search_facts`: fuzzy+semantic search with filtering.
   - `list_rules`: returns rule metadata.
   - `preview_query`: dry-run query showing shareable vs blocked IDs.

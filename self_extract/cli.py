@@ -1,9 +1,8 @@
 from __future__ import annotations
 
-import asyncio
 from datetime import date
 from pathlib import Path
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 
 try:
     import typer
@@ -308,8 +307,15 @@ def query(
 def context_serve(
     profile: Path = typer.Option(Path("output/profile-all.json"), "--profile", "-p"),
     rules: Path = typer.Option(Path("context-rules.json"), "--rules", "-r"),
+    transport: str = typer.Option(
+        "http",
+        "--transport",
+        help="FastMCP transport to use (stdio, http, or sse).",
+        case_sensitive=False,
+    ),
     host: str = typer.Option("127.0.0.1", "--host"),
     port: int = typer.Option(8077, "--port"),
+    path: str = typer.Option("/mcp", "--path", help="HTTP path when using http transport."),
     embedding_model: str = typer.Option("all-MiniLM-L6-v2", "--embedding-model"),
     embedding_device: Optional[str] = typer.Option(None, "--embedding-device"),
 ) -> None:
@@ -322,12 +328,17 @@ def context_serve(
     server = ContextMCPServer(
         profile_path=profile,
         rules_path=rules,
-        host=host,
-        port=port,
         embedding_model=embedding_model,
         embedding_device=embedding_device,
     )
-    asyncio.run(server.start())
+    run_kwargs: Dict[str, Any] = {"transport": transport.lower()}
+    if run_kwargs["transport"] in {"http", "sse"}:
+        run_kwargs["host"] = host
+        run_kwargs["port"] = port
+    if run_kwargs["transport"] == "http":
+        run_kwargs["path"] = path
+
+    server.run(**run_kwargs)
 
 
 @context_app.command("tui")
