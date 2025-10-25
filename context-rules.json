@@ -1,0 +1,23 @@
+{
+  "rules": [
+    {
+      "id": "allow-project",
+      "action": "allow",
+      "kind": "semantic",
+      "description": "Share project related facts",
+      "labels": ["project update", "work context"],
+      "threshold": 0.80,
+      "domains": ["project"]
+    },
+    {
+      "id": "block-private-tag",
+      "action": "deny",
+      "kind": "pattern",
+      "description": "Hide facts tagged as private",
+      "patterns": ["private"],
+      "pattern_type": "regex",
+      "tags": ["private"],
+      "threshold": 0.85
+    }
+  ]
+}
