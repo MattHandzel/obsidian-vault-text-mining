@@ -2,3 +2,5 @@ output/
 config.yaml
 .venv
 self_extract/__pycache__/
+.env
+self_extract/context_server/__pycache__
