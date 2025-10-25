@@ -30,7 +30,7 @@ def build_profile_database(
             continue
         if not isinstance(payload, dict):
             continue
-        summary = str(payload.get("summary", ""))
+        summary = str(payload.get("summary", "")).strip()
         for item in payload.get("items", []) or []:
             if not isinstance(item, dict):
                 continue
@@ -38,18 +38,30 @@ def build_profile_database(
             if not text:
                 continue
             fact_id = str(item.get("id") or uuid4())
-            combined_text = f"{text}\n{summary}" if summary else text
+            # Build an embedding prompt that stays focused on the fact itself.
+            # Bucket-level summaries often introduce unrelated bullet lists, so we avoid
+            # concatenating them into every fact. Include supporting evidence when present.
+            evidence = item.get("evidence") or []
+            if isinstance(evidence, list):
+                evidence_text = "\n".join(str(ev).strip() for ev in evidence if str(ev).strip())
+            else:
+                evidence_text = str(evidence).strip()
+            if evidence_text and summary and evidence_text.strip() == summary:
+                # Ignore bucket-level summary mistakenly attached as evidence.
+                evidence_text = ""
+            combined_parts = [text]
+            if evidence_text:
+                combined_parts.append(evidence_text)
+            item_summary = str(item.get("summary", "")).strip()
+            if item_summary:
+                combined_parts.append(item_summary)
+            combined_text = "\n".join(part for part in combined_parts if part)
             embedding = backend.encode(combined_text)
             governance = item.get("governance") or []
             tags: List[str] = [bucket]
             if isinstance(governance, list):
                 tags.extend(str(value).strip() for value in governance if str(value).strip())
-            evidence = item.get("evidence") or []
             # Compose a human-readable details string from evidence items.
-            if isinstance(evidence, list):
-                evidence_text = "\n".join(str(ev).strip() for ev in evidence if str(ev).strip())
-            else:
-                evidence_text = str(evidence).strip()
             attributes: Dict[str, object] = {
                 "mentions": item.get("mentions", 1),
                 "evidence": evidence,
@@ -63,7 +75,7 @@ def build_profile_database(
                 "title": text.split(". ")[0][:120] or text[:120],
                 # Summary intentionally omitted in v1; the fact text is captured in title.
                 # Downstream loader tolerates missing summary.
-                "details": evidence_text,
+                "details": evidence_text or item_summary,
                 "domain": bucket,
                 "tags": list(dict.fromkeys(tags)),
                 "sensitivity": {"level": sensitivity_level, "reasons": list(lower_tags)},

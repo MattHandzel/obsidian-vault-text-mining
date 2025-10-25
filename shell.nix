@@ -1,6 +1,4 @@
-{ pkgs ? import <nixpkgs> {} }:
-
-let
+{pkgs ? import <nixpkgs> {}}: let
   pythonEnv = pkgs.python312.withPackages (ps: [
     ps.pyyaml
     ps.typer
@@ -12,11 +10,13 @@ let
     ps.textual
   ]);
 in
-pkgs.mkShell {
-  packages = [ pythonEnv pkgs.git pkgs.jq pkgs.curl ];
+  pkgs.mkShell {
+    packages = [pythonEnv pkgs.git pkgs.jq pkgs.curl];
 
-  shellHook = ''
-    echo "▶ Using Python: $(python --version)"
-    export PYTHONPATH="$PWD"
-  '';
-}
+    shellHook = ''
+          echo "▶ Using Python: $(python --version)"
+          export PYTHONPATH="$PWD"
+
+      export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(nix eval --raw nixpkgs#gcc.cc.lib)/lib
+    '';
+  }

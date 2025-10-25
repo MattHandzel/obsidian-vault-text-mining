@@ -12,12 +12,7 @@ except ImportError:  # pragma: no cover - optional dependency
     process = None
 
 from .data import Fact, KnowledgeBase
-from .math_utils import (
-    argsort_desc,
-    deterministic_embedding,
-    matrix_dot_vector,
-    normalize_vector,
-)
+from .math_utils import argsort_desc, matrix_dot_vector, normalize_vector
 
 try:
     from sentence_transformers import SentenceTransformer
@@ -53,35 +48,40 @@ class EmbeddingBackend:
         self,
         model_name: str = "all-MiniLM-L6-v2",
         device: Optional[str] = None,
-        fallback_dim: int = 128,
     ) -> None:
         self._model_name = model_name
         self._device = device
         self._model: Optional[SentenceTransformer] = None
-        self._fallback_dim = fallback_dim
 
     def ensure_model(self) -> SentenceTransformer:
         if SentenceTransformer is None:
-            raise RuntimeError("sentence-transformers is required for semantic search")
+            raise RuntimeError(
+                "sentence-transformers is required for semantic search but is not installed."
+            )
         if self._model is None:
             kwargs = {"device": self._device} if self._device else {}
-            self._model = SentenceTransformer(self._model_name, **kwargs)
+            try:
+                self._model = SentenceTransformer(self._model_name, **kwargs)
+            except Exception as exc:  # pragma: no cover - runtime dependency
+                raise RuntimeError(
+                    f"Failed to load embedding model '{self._model_name}': {exc}"
+                ) from exc
         return self._model
 
     def encode(self, text: str) -> tuple[float, ...]:
-        if SentenceTransformer is None:
-            return self._fallback_embedding(text)
         try:
             model = self.ensure_model()
+        except RuntimeError:
+            raise
+        try:
             vector = model.encode(text, normalize_embeddings=True)
-            if hasattr(vector, "tolist"):
-                vector = vector.tolist()
-            return normalize_vector(vector)
-        except Exception:  # pragma: no cover - runtime fallback
-            return self._fallback_embedding(text)
-
-    def _fallback_embedding(self, text: str) -> tuple[float, ...]:
-        return deterministic_embedding(text, self._fallback_dim)
+        except Exception as exc:  # pragma: no cover - runtime dependency
+            raise RuntimeError(
+                f"Failed to encode text with model '{self._model_name}': {exc}"
+            ) from exc
+        if hasattr(vector, "tolist"):
+            vector = vector.tolist()
+        return normalize_vector(vector)
 
 
 class CombinedSearchService:
@@ -128,7 +128,8 @@ class CombinedSearchService:
             score_cutoff=request.fuzzy_threshold,
             limit=len(choices),
         )
-        return {match_id: float(score) / 100.0 for match_id, score, _ in results}
+        # `process.extract` returns tuples of (match_text, score, key) when choices is a dict.
+        return {match_key: float(score) / 100.0 for _, score, match_key in results}
 
     def _run_semantic(self, query: str, request: SearchRequest) -> dict[str, float]:
         facts = self._kb.facts()
