@@ -16,9 +16,12 @@ except ImportError:  # pragma: no cover - optional dependency
 
 from fastmcp import FastMCP
 from fastmcp.server.auth import AuthProvider
+from mcp.server.auth.middleware.auth_context import get_access_token
 
 from .service import PersonalContextService, PersonalContextResponse
 from .search import SearchRequest
+
+ALLOWED_EMAIL = "handzelmatthew@gmail.com"
 
 
 class ContextMCPServer:
@@ -45,10 +48,33 @@ class ContextMCPServer:
         self._mcp = FastMCP(name=server_name, auth=auth)
         self._register_tools()
 
+    @staticmethod
+    def _extract_email() -> Optional[str]:
+        """Return the authenticated user's email claim, if available."""
+
+        token = get_access_token()
+        if token is None:
+            return None
+        claims = getattr(token, "claims", {}) or {}
+        for key in ("email", "preferred_username", "upn"):
+            value = claims.get(key)
+            if isinstance(value, str) and value:
+                return value.casefold()
+        return None
+
+    def _require_authorized_user(self) -> None:
+        """Ensure the active request belongs to the approved account."""
+
+        email = self._extract_email()
+        if email != ALLOWED_EMAIL:
+            raise PermissionError(
+                "Access denied: this MCP server is restricted to handzelmatthew@gmail.com."
+            )
+
     def _register_tools(self) -> None:
         """Register FastMCP tools backed by the context service."""
 
-        @self._mcp.tool
+        @self._mcp.tool(annotations={"readOnlyHint": True})
         def search_facts(
             query: str,
             top_k: int = 10,
@@ -58,7 +84,30 @@ class ContextMCPServer:
             domain: Optional[str] = None,
             tags: Optional[List[str]] = None,
         ) -> Dict[str, Any]:
-            """Search knowledge base using semantic + fuzzy similarity with filtering."""
+            """Retrieve shareable facts ranked by semantic + fuzzy relevance.
+
+            Args:
+                query: Natural language search string evaluated against fact titles,
+                    summaries, tags, and evidence.
+                top_k: Maximum number of ranked results to include (after filtering).
+                fuzzy_threshold: Minimum RapidFuzz token-set score (0–100) for textual
+                    matches before weighting.
+                semantic_weight: Weight applied to embedding cosine similarity.
+                fuzzy_weight: Weight applied to lexical similarity scores.
+                domain: Optional domain name used to constrain matches (e.g., ``facts``).
+                tags: Optional list of tags; all provided tags must appear on a fact.
+
+            Returns:
+                Mapping with the original request parameters, ranked fact metadata,
+                filtered identifiers, audit breakdown, numeric summary, and a textual
+                explanation geared toward LLM agents.
+
+            Raises:
+                PermissionError: Caller is not authorized to use the context tools.
+                RuntimeError: Embedding model cannot be loaded or encode the query.
+            """
+
+            self._require_authorized_user()
 
             tag_list = list(tags or [])
             request = SearchRequest(
@@ -80,15 +129,29 @@ class ContextMCPServer:
                 fuzzy_weight=float(fuzzy_weight),
             )
 
-        @self._mcp.tool
+        @self._mcp.tool(annotations={"readOnlyHint": True})
         def list_rules() -> Dict[str, Any]:
-            """Return configured sharing rules and metadata."""
+            """Describe active sharing rules evaluated during searches.
 
+            Returns:
+                A mapping with serialized rule definitions and a summary count so
+                LLMs can reason about potential policy blocks.
+
+            Raises:
+                PermissionError: Caller is not authorized to use the context tools.
+            """
+
+            self._require_authorized_user()
+
+            rules = [rule.to_dict() for rule in self._service.rule_engine.rules()]
             return {
-                "rules": [rule.to_dict() for rule in self._service.rule_engine.rules()],
+                "rules": rules,
+                "summary": {
+                    "rule_count": len(rules),
+                },
             }
 
-        @self._mcp.tool
+        @self._mcp.tool(annotations={"readOnlyHint": True})
         def preview_query(
             query: str,
             top_k: int = 10,
@@ -98,7 +161,18 @@ class ContextMCPServer:
             semantic_weight: float = 1.0,
             fuzzy_weight: float = 0.3,
         ) -> Dict[str, Any]:
-            """Preview which facts would be shared without returning content."""
+            """Preview which facts would be shared without returning content.
+
+            Args mirror :func:`search_facts`. The response only includes identifiers,
+            audit data, and an explanation string so an orchestrating LLM can decide
+            whether to proceed with a full retrieval.
+
+            Raises:
+                PermissionError: Caller is not authorized to use the context tools.
+                RuntimeError: Embedding model cannot be loaded or encode the query.
+            """
+
+            self._require_authorized_user()
 
             tag_list = list(tags or [])
             request = SearchRequest(
@@ -187,7 +261,11 @@ def _response_to_dict(
     semantic_weight: float,
     fuzzy_weight: float,
 ) -> Dict[str, Any]:
-    """Serialize a response returned by the context service."""
+    """Serialize a context response with rich metadata for LLM agents.
+
+    The structure mirrors the CLI output but adds request echoing, a numeric summary,
+    and a narrative explanation so clients can reason about downstream actions.
+    """
 
     shared_payload = [
         {
@@ -229,20 +307,7 @@ def _response_to_dict(
             "semantic_weight": semantic_weight,
             "fuzzy_weight": fuzzy_weight,
         },
-        "shared": [
-            {
-                "id": fact.fact_id,
-                "title": fact.title,
-                "summary": fact.summary,
-                "domain": fact.domain,
-                "tags": fact.tags,
-                "score": fact.score,
-                "search_reason": fact.search_reason,
-                "rule_action": fact.rule_action,
-                "rule_reason": fact.rule_reason,
-            }
-            for fact in response.shared
-        ],
+        "shared": shared_payload,
         "filtered": filtered,
         "audit": audit,
         "summary": {
