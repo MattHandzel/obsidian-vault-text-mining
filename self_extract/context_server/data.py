@@ -106,7 +106,7 @@ class KnowledgeBase:
 def _fact_from_dict(payload: Dict[str, object]) -> Fact:
     fact_id = str(payload["id"])
     title = str(payload["title"]).strip()
-    summary = str(payload["summary"]).strip()
+    summary = str(payload.get("summary", "")).strip()
     domain = str(payload["domain"]).strip()
     tags_raw = payload.get("tags", [])
     tags: Tuple[str, ...] = tuple(str(tag).strip() for tag in tags_raw if str(tag).strip())

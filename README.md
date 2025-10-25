@@ -97,9 +97,33 @@ docker run --rm \
 
 Adjust the bind mounts if your profile or rule files live elsewhere. Additional CLI flags (e.g. `--embedding-model`) work the same way; append them to the end of the `docker run` command.
 
+## Google OAuth Authentication
+
+Secure the MCP endpoint with Google's OAuth 2.0 flow by using FastMCP's built-in Google provider. Create a Web application credential in the Google Cloud Console, add your public server URL under **Authorized JavaScript origins**, and register the callback at `<base-url>/auth/callback` (or your custom path). Then export the credentials and launch the server with `--auth-type google`:
+
+```bash
+export CONTEXT_AUTH_BASE_URL="https://your-server.com"
+export CONTEXT_AUTH_CLIENT_ID="123456789.apps.googleusercontent.com"
+export CONTEXT_AUTH_CLIENT_SECRET="GOCSPX-abc123..."
+# Optional overrides:
+# export CONTEXT_AUTH_REDIRECT_PATH="/auth/callback"
+# export CONTEXT_AUTH_ALLOWED_REDIRECTS="http://localhost:*,https://claude.ai/*"
+# export CONTEXT_AUTH_TIMEOUT_SECONDS="10"
+
+python -m self_extract.cli context serve \
+  --transport http \
+  --host 0.0.0.0 \
+  --port 47771 \
+  --auth-type google \
+  --auth-required-scope openid \
+  --auth-required-scope https://www.googleapis.com/auth/userinfo.email
+```
+
+If you omit `--auth-required-scope`, the CLI requests `openid` and `userinfo.email` by default. Provide additional scopes either by repeating the flag or via `CONTEXT_AUTH_REQUIRED_SCOPES=scope1,scope2`.
+
 ## OAuth Proxy Authentication
 
-Secure the MCP endpoint with OAuth by enabling FastMCP's OAuth Proxy integration. Register an application with your provider (GitHub, Google, Azure AD, etc.), note the authorization and token endpoints, and configure a redirect URI that matches your public server URL plus the callback path (defaults to `/auth/callback`). Then export the credentials and launch the server with `--auth-type oauth-proxy`:
+Need to integrate with a different provider? Keep using FastMCP's OAuth Proxy. Register an OAuth 2.0 client with your identity provider, note the authorization and token endpoints, and configure the redirect URI as `<base-url>/auth/callback`. Then export the credentials and launch the server with `--auth-type oauth-proxy`:
 
 ```bash
 export CONTEXT_AUTH_BASE_URL="https://your-server.com"

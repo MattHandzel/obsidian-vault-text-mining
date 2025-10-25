@@ -247,7 +247,12 @@ def _apply_env_aliases() -> None:
 _load_env_file()
 _apply_env_aliases()
 
-from .context_server.auth import OAuthProxySettings, build_oauth_proxy
+from .context_server.auth import (
+    OAuthProxySettings,
+    GoogleAuthSettings,
+    build_google_provider,
+    build_oauth_proxy,
+)
 from .profile_query import (
     filter_aggregated,
     filter_raw,
@@ -447,13 +452,13 @@ def context_serve(
     auth_type: str = typer.Option(
         "none",
         "--auth-type",
-        help="Authentication provider to protect the MCP server (none, oauth-proxy).",
+        help="Authentication provider to protect the MCP server (none, google, oauth-proxy).",
         case_sensitive=False,
     ),
     auth_base_url: Optional[str] = typer.Option(
         None,
         "--auth-base-url",
-        help="Public base URL for the MCP server when using OAuth Proxy.",
+        help="Public base URL for the MCP server when using Google OAuth or OAuth Proxy.",
         envvar="CONTEXT_AUTH_BASE_URL",
     ),
     auth_client_id: Optional[str] = typer.Option(
@@ -533,12 +538,18 @@ def context_serve(
     auth_required_scope: List[str] = typer.Option(
         [],
         "--auth-required-scope",
-        help="Scopes that must be present on upstream tokens.",
+        help="Scopes requested from or required on upstream tokens.",
     ),
     auth_valid_scope: List[str] = typer.Option(
         [],
         "--auth-valid-scope",
         help="Scopes advertised to MCP clients via the OAuth metadata endpoints.",
+    ),
+    auth_timeout_seconds: Optional[int] = typer.Option(
+        None,
+        "--auth-timeout-seconds",
+        help="Timeout in seconds for Google OAuth API requests.",
+        envvar="CONTEXT_AUTH_TIMEOUT_SECONDS",
     ),
 ) -> None:
     """Start the MCP server for LLM integrations."""
@@ -548,9 +559,9 @@ def context_serve(
     from .context_server.mcp import ContextMCPServer
 
     auth_type_normalized = auth_type.lower()
-    if auth_type_normalized not in {"none", "oauth-proxy"}:
+    if auth_type_normalized not in {"none", "google", "oauth-proxy"}:
         raise typer.BadParameter(
-            "Unsupported auth type. Choose from: none, oauth-proxy",
+            "Unsupported auth type. Choose from: none, google, oauth-proxy",
             param_hint=["--auth-type"],
         )
 
@@ -559,7 +570,35 @@ def context_serve(
     auth_valid_scope = _merge_env_list(auth_valid_scope, "CONTEXT_AUTH_VALID_SCOPES")
 
     auth_provider = None
-    if auth_type_normalized == "oauth-proxy":
+    if auth_type_normalized == "google":
+        required_fields = {
+            "--auth-base-url": auth_base_url,
+            "--auth-client-id": auth_client_id,
+            "--auth-client-secret": auth_client_secret,
+        }
+        missing = [name for name, value in required_fields.items() if not value]
+        if missing:
+            raise typer.BadParameter(
+                f"Missing required Google OAuth settings: {', '.join(missing)}",
+                param_hint=["--auth-type"],
+            )
+
+        google_required_scopes: Optional[List[str]] = (
+            auth_required_scope
+            if auth_required_scope
+            else ["openid", "https://www.googleapis.com/auth/userinfo.email"]
+        )
+        settings = GoogleAuthSettings(
+            client_id=auth_client_id or "",
+            client_secret=auth_client_secret or "",
+            base_url=auth_base_url or "",
+            redirect_path=auth_redirect_path,
+            required_scopes=google_required_scopes,
+            timeout_seconds=auth_timeout_seconds,
+            allowed_client_redirect_uris=auth_allowed_redirect or None,
+        )
+        auth_provider = build_google_provider(settings)
+    elif auth_type_normalized == "oauth-proxy":
         required_fields = {
             "--auth-base-url": auth_base_url,
             "--auth-client-id": auth_client_id,

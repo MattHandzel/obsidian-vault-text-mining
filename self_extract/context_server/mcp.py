@@ -8,9 +8,11 @@ from typing import Any, Dict, List, Optional
 try:
     from rich.console import Console
 except ImportError:  # pragma: no cover - optional dependency
+
     class Console:  # type: ignore[no-redef]
         def print(self, *args: Any, **_kwargs: Any) -> None:
             __import__("builtins").print(*args)
+
 
 from fastmcp import FastMCP
 from fastmcp.server.auth import AuthProvider
@@ -40,7 +42,7 @@ class ContextMCPServer:
             embedding_device=embedding_device,
         )
         self._auth = auth
-        self._mcp = FastMCP(name=server_name, auth=auth)
+        self._mcp = FastMCP(name=server_name, auth=auth, expose_oauth_config=True)
         self._register_tools()
 
     def _register_tools(self) -> None:
@@ -109,7 +111,9 @@ class ContextMCPServer:
         run_kwargs: Dict[str, Any] = {}
         if transport in {"http", "sse"}:
             if host is None or port is None:
-                raise ValueError("host and port are required for HTTP or SSE transports")
+                raise ValueError(
+                    "host and port are required for HTTP or SSE transports"
+                )
             run_kwargs["host"] = host
             run_kwargs["port"] = port
         if transport == "http" and path is not None:
@@ -124,7 +128,8 @@ class ContextMCPServer:
             f"[green]Context MCP server running via FastMCP on[/green] {' '.join(location)}"
         )
         if self._auth is not None:
-            self._console.print("[cyan]OAuth Proxy authentication enabled[/cyan]")
+            provider_name = type(self._auth).__name__
+            self._console.print(f"[cyan]{provider_name} authentication enabled[/cyan]")
         self._mcp.run(transport=transport, **run_kwargs)
 
 

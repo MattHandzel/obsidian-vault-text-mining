@@ -1,0 +1,2135 @@
+  SelfKnowledgeExtraction on  api-server [!?] via 🐍 v3.12.11 (.venv) via ❄️  impure (nix-shell) 󰔛 2s
+  ➜ python -m self_extract.cli query --profile ./output/profile.json  --after 2025-07-10       
+                                                                                                                                                    Aggregated Matches                                                                                                                                                     
+ The author's partner is named Dominique.                                                
+                                                                                         
+ The author spoke with Ryan McCall, who is interested in improving his consciousness.    
+                                                                                         
+ The author practices yoga.                                                              
+ The author met Justin, Daniel Ives, and Daniel Burger.                                  
+                                                                                         
+ The author met Diana, an architect from Russia, who reminds them of Julia.              
+                                                                                         
+ The author is thinking about Zoe.                                                       
+ The author has asthma and avoids breads and sweets.                                     
+                                                                                         
+ The author traveled from Madrid to Chicago.                                             
+ The author spent time on a bus talking to an elderly woman.                             
+                                                                                         
+ The author purchased blueberries.                                                       
+ The author met a woman named Maria Henriksveen.                                         
+                                                                                         
+ The author is working on improving speech-to-text software.                             
+ The author is interested in Spanish language acquisition.                               
+                                                                                         
+ The author is considering moving to San Francisco.                                      
+                                                                                         
+ The author is 25 years old.                                                             
+                                                                                         
+ The author interacted with Pablo and Celia.                                             
+                                                                                         
+ The author's name is I/me.                                                              
+                                                                                         
+ The author is working on the Residencies Delta program.                                 
+ The author is working on a course called CS527.                                         
+ The author is planning a trip.                                                          
+ The author is named I.                                                                  
+                                                                                         
+ The author is interested in reading Derek Sivers' book, 'How to Live'.                  
+                                                                                         
+                                                                                         
+ The author is currently living with roommates William Garrett, Islam Shehata, and       
+ Sanzhar Sarsenbay.                                                                      
+ The author is a member of the Effective Altruism (EA) community.                        
+ The author has friends named Miles Gilberti, Ben Schattinger, Sanzhar Sarsenbay, Islam, 
+ and Gabby.                                                                              
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ Zoe Isabel Senon is involved in effective accelerationism and has a personal knowledge  
+ system.                                                                                 
+ Zoe Isabel Senon is a backend engineer specializing in blockchain development using     
+ Golang.                                                                                 
+ The author met Zoe Isabel Senon, a friend of Pablo's.                                   
+ The author is working on a CS598JH project.                                             
+ The author is working as a doctor.                                                      
+ The author is participating in the LBF (likely a learning/travel/personal development   
+ program).                                                                               
+ The author is interested in supplements.                                                
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is interested in remote work.                                                
+                                                                                         
+ The author is interested in longevity and potentially organ replacement.                
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is interested in approaching women systematically.                           
+                                                                                         
+ The author is currently traveling in Spain.                                             
+                                                                                         
+ The author is a software developer.                                                     
+ The author is 36/37 years old.                                                          
+ The author filmed Alvaro playing the role of 'Death'.                                   
+ The author attended a public protest for longevity.                                     
+ The author attended a presentation by Rey Kurzweil on futurism and escape velocity.     
+                                                                                         
+ The author worked with Sebastian, Ariel, Taylor, and Levan.                             
+                                                                                         
+ The author won the Hackathon.                                                           
+                                                                                         
+ The author woke up around 10:00 AM.                                                     
+ The author spent time with Celia.                                                       
+ The author participated in a Hackathon.                                                 
+                                                                                         
+ The author is talking with Pablo.                                                       
+ The author is currently studying.                                                       
+ The author has a friend named Josh.                                                     
+ The author bought gifts for family.                                                     
+ The author ate a Spanish dish called Chipirones a la plancha with Pablo and Celia.      
+ Michael left the team.                                                                  
+                                                                                         
+ The author visited Levan in the UK.                                                     
+ The author met Arina and a Russian man named (forgot his name) at Arminia.              
+ The author has a sister with a Dutch boyfriend.                                         
+ Theresa was the author's flyer during acro yoga.                                        
+ The hackathon group consists of Sebastian, Ariel, Levan, and Michael.                   
+                                                                                         
+ Saava is interested in consciousness.                                                   
+ Robert is British and lives in Portugal.                                                
+ Michele is from Australia and is divorced.                                              
+                                                                                         
+ Matt Scholz presented on gene therapy.                                                  
+                                                                                         
+                                                                                         
+ Ludwig is physically fit and knowledgeable.                                             
+                                                                                         
+ Levan is 36 years old, Sebastian is 34 years old, and he has a 6-month-old daughter.    
+                                                                                         
+ Cat Thu Nguyen Huu was referenced on YouTube.                                           
+                                                                                         
+ Aubrey de Gray is a famous person.                                                      
+ The author spoke with William James, Ines, and Saresh.                                  
+ The author spoke with Samuli, who recommends increasing one's 'luck surface area'.      
+                                                                                         
+                                                                                         
+ The author spoke with Michael Todhunter, who is developing an AI lab.                   
+                                                                                         
+                                                                                         
+ The author spoke with Daniel Berger, who aligns in terms of thought patterns.           
+                                                                                         
+                                                                                         
+ The author spoke with Dan Duma, who is from Scotland and proficient in Claude code.     
+                                                                                         
+                                                                                         
+ The author is currently concerned about their body fat percentage.                      
+ The author is currently tracking daily habits.                                          
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author woke up at 5am.                                                              
+ The author spoke Spanish to people at the hostel.                                       
+ The author observed that many people in Spain speak Spanish.                            
+                                                                                         
+ The author observed a homeless population that is less prevalent than in other          
+ locations.                                                                              
+ The author noticed that Spaniards have a darker complexion than expected.               
+ The author is traveling.                                                                
+ The author is currently at an airport.                                                  
+ The author has met Aryan and Martina.                                                   
+ Martina is pursuing a Master's in Chemistry.                                            
+ Aryan has a Master's in Data Science and AI.                                            
+ The author used melatonin to fall asleep.                                               
+ The author met Jeff, a first-year PhD student.                                          
+                                                                                         
+ The author is working on a laptop project.                                              
+ The author is preparing to travel to Spain.                                             
+ The author is friends with Max and Kaushika and Luli.                                   
+ The author is considering buying a more reliable laptop in the future.                  
+                                                                                         
+ The author gave a presentation in CS598JH.                                              
+ The author's daily routine includes a wind-down routine starting at 22:15.              
+ The author woke up around 7:10 AM.                                                      
+ The author wished Ricky a happy birthday.                                               
+ The author visited the dentist.                                                         
+ The author spoke with Ricky about his Roblox rejection.                                 
+ The author is working on a CS598 presentation.                                          
+                                                                                         
+ The author is taking 19 credit hours and doing research.                                
+ The author is scheduled to travel to Spain.                                             
+ The author is procrastinating on tasks.                                                 
+ The author is planning to spend three hours on coursework tomorrow.                     
+                                                                                         
+ The author is having difficulty with data transfer.                                     
+ The author is experiencing a cold.                                                      
+ The author had a conversation with Ryan Chu and responded to his message.               
+                                                                                         
+                                                                                         
+ The author intends to start a wind-down routine at 22:15.                               
+                                                                                         
+ The author's name is 'I'                                                                
+ The author interacts with an AI assistant named Siri.                                   
+                                                                                         
+ The author called Michael.                                                              
+ The author's name is implied to be 'I'.                                                 
+ The author is working on a capture system organization system.                          
+                                                                                         
+ The author is using voice-to-text.                                                      
+                                                                                         
+ The author is currently enrolled in several courses.                                    
+                                                                                         
+ The author's name is I.                                                                 
+                                                                                         
+ The author starts a wind-down routine at 22:15.                                         
+ The author is working on a capture system.                                              
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is running with Max.                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is reading Essentialism.                                                     
+                                                                                         
+ The author is experiencing stress related to Anthropic, applying to Anthropic, and the  
+ dentist.                                                                                
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is dating Brandon.                                                           
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is considering starting a business.                                          
+ The author is a student.                                                                
+ The author has a relationship with Natalia.                                             
+ The author's current time is 11:15.                                                     
+ The author is working on multiple projects, including MP2 for CS527 and planning for a  
+ trip to Spain.                                                                          
+ The author is currently in a location that includes Siri and John Deere.                
+ The doctor suspects a minor bone fracture.                                              
+ The author woke up around 9:30 without an alarm clock.                                  
+ The author was wearing a tank top during the TIMAN meeting.                             
+ The author has an infection.                                                            
+ The author attended a TIMAN group meeting.                                              
+ The author visited a clinic.                                                            
+ The author is experiencing elbow pain.                                                  
+ The author is working on finding full-time employment.                                  
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is using ChatGPT to record their day, but finds the interface frustrating    
+ due to audio deletion issues.                                                           
+ The author is struggling with packaging their knowledge management system using         
+ Electron.                                                                               
+ The author is friends with Aryan, who is involved in the LBF, and Johannes Brix.        
+ The author's name is 'I' or 'me'.                                                       
+ The author's little sister is attending college.                                        
+ The author sent a video message to Islam.                                               
+                                                                                         
+ The author is currently working on a lab project.                                       
+                                                                                         
+                                                                                         
+ The author is considering wearing a helmet.                                             
+ The author is biking from the Union to ISR.                                             
+ The author has ridden their bike frequently.                                            
+ The author has experienced a head injury.                                               
+                                                                                         
+ The author is using a todo system to prioritize tasks.                                  
+                                                                                         
+ The author is considering purchasing Superhuman.                                        
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is attempting to improve their reflection skills.                            
+                                                                                         
+ The author's name is Will.                                                              
+ The author's current time is 23:41.                                                     
+ The author is currently engaged in a CBT exercise.                                      
+ The author's name is Matt.                                                              
+                                                                                         
+                                                                                         
+ The author uses Neovim.                                                                 
+ The author traveled to San Francisco.                                                   
+ The author met several people during the day.                                           
+                                                                                         
+                                                                                         
+ The author is staying at a hostel.                                                      
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is friends with Krista and Islam.                                            
+ The author is considering staying with several people.                                  
+                                                                                         
+ The author is attempting to implement speech to text.                                   
+ The author woke up at around 9am.                                                       
+ The author visited Natalia's dorm.                                                      
+ The author spent most of the day at Grainger library.                                   
+ The author contacted Vincent Lavelle.                                                   
+ The author's daily routine involves a wind-down routine starting at 22:15.              
+ The author went to Toastmasters today.                                                  
+ The author visited Anelli Alfredeen.                                                    
+                                                                                         
+ The author is working on an independent study for 4 credit hours.                       
+ The author woke up tired.                                                               
+ The author is trying to reduce phone usage before bed and in the morning.               
+                                                                                         
+                                                                                         
+ The author is considering a 8:00 AM wake-up time.                                       
+                                                                                         
+ The author identified 3% improvement in decision making and exploration.                
+ The author has a new room cleaning strategy.                                            
+                                                                                         
+ The author attended CS546 and CS527 classes.                                            
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author attempted to wake up earlier but failed.                                     
+                                                                                         
+ The author's name is Kuba Klimek.                                                       
+ The author woke up around 10:00 today.                                                  
+ The author lives at 210 S 4th St.                                                       
+                                                                                         
+ The author is working on a project involving Nix flakes.                                
+ The author is using the sunk cost fallacy.                                              
+                                                                                         
+ The author is taking an I school course.                                                
+ The author is attempting to implement a wind-down routine.                              
+ The author has asthma.                                                                  
+ Jacen has connections in real estate in San Francisco.                                  
+                                                                                         
+ The author wrote an email to Rob and Seth Paulson.                                      
+ The author works at a company and speaks notes from Scrum.                              
+ The author woke up late on July 17th.                                                   
+ The author spent time with David Siebel.                                                
+ The author is considering attending Chicago Startup Weekend.                            
+ The author has a conversation with Zev McManus-Mendelowitz and Will Garrett.            
+                                                                                         
+ The author had a call with Nathan S Cheng.                                              
+ The author works at a company.                                                          
+ The author woke up at 6:30 am.                                                          
+ The author is working on improving their growth systems.                                
+ The author is working on distributing tasks more evenly among a group.                  
+                                                                                         
+ The author is interested in maintaining a specific body fat percentage.                 
+                                                                                         
+                                                                                         
+ The author is interested in exploring different software options, such as Protégé.      
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is interested in exploring Munich, Germany.                                  
+ The author is considering creating a newsletter to share classes and collaborations.    
+                                                                                         
+                                                                                         
+ The author is considering a waterproof laptop case.                                     
+                                                                                         
+                                                                                         
+ The author is considering a public life.                                                
+                                                                                         
+                                                                                         
+ The author is a graduate student.                                                       
+                                                                                         
+                                                                                         
+ The author has several colleagues he interacts with regularly.                          
+                                                                                         
+ The author has a habit of following a new schedule.                                     
+ The author cooked for approximately 2.5 hours.                                          
+ The author attended a Codenames game with Ryan Qu, Kevin Li, and others.                
+                                                                                         
+ The author took a 05:00 flight.                                                         
+ The author spent time responding to contacts.                                           
+                                                                                         
+ The author met with James Win, who advocates for 'living in the arena'.                 
+                                                                                         
+ The author met with Eduardo Pontes Reis at the Taylor Street Coffee shop.               
+ The author met Natalia Handzel.                                                         
+ The author found the 'sound bath' experience surprising.                                
+                                                                                         
+ The author connected with people who are 6 months ahead of them at the event.           
+                                                                                         
+ The author attended the Flourishing Founders event and connected with Bryan.            
+ Mohammad Ali owns a chicken named Chico.                                                
+                                                                                         
+ James Fang was unimpressed by the Frontier Tower.                                       
+ Eduardo Pontes Reis is working on an application that integrates data from Apple Fit,   
+ labs, and allows user interaction.                                                      
+                                                                                         
+                                                                                         
+ Eduardo Pontes Reis is from Brazil and works as a radiologist at a startup that         
+ processes 10% of radiology images.                                                      
+                                                                                         
+                                                                                         
+ Chico the chicken is a local legend in Palo Alto.                                       
+                                                                                         
+ Benjamin is trying to deglOGLE his phone and is interested in supply chain issues.      
+                                                                                         
+ Alton Sun contacted the author and offered to meet him at the Flourishing Founders      
+ event.                                                                                  
+ The author is working on a Looki device and is attempting to debug it.                  
+                                                                                         
+                                                                                         
+ The author is using speech-to-text to send messages.                                    
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is currently traveling with family, including a mother, a sister (Natalia    
+ Handzel), and a roommate (Will).                                                        
+                                                                                         
+ The author is considering starting a consulting business, potentially for Looki or      
+ other companies.                                                                        
+ The author woke up at 9:00 AM.                                                          
+ The author went to bed around 2:00 AM.                                                  
+ The author took the Valley Train instead of Caltrain.                                   
+ The author took the BART to North San Jose.                                             
+ The author met with Ojus Save and Roey [INERT LAST NAME] at Zoom.                       
+ The author met with Iryna Iziumska at the Ai Infra Meetup with Nvidia Adobe Zoom        
+ Developers and Alluxio.                                                                 
+ The author is working on a knowledge capture system.                                    
+                                                                                         
+ The author is preparing for a trip back to Chicago.                                     
+ The author is planning to travel to Spain.                                              
+ The author is listening to Ojus on a meeting.                                           
+ The author is in San Francisco.                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is currently in San Francisco.                                               
+                                                                                         
+ The author is 20 years old and identifies as Polish.                                    
+ The author binged YouTube and engaged in adult chatting and porn.                       
+                                                                                         
+                                                                                         
+ Ojus was born in 1993.                                                                  
+ The author's roommate is from Saudi Arabia.                                             
+ The author's name is James Fang and Ricky Fang.                                         
+                                                                                         
+                                                                                         
+ The author met Graham Chapman and Alton Sun today.                                      
+ The author is working at DataBricks.                                                    
+ The author is working on improving their social skills and confidence.                  
+ The author is traveling and experiencing new places.                                    
+                                                                                         
+ The author is interested in technology and software engineering.                        
+                                                                                         
+ The author is interested in personal branding.                                          
+ The author is interested in learning and self-improvement.                              
+                                                                                         
+                                                                                         
+ The author is interested in learning and experiencing new things.                       
+                                                                                         
+ The author is interested in community and connection.                                   
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is interested in AI and its applications.                                    
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is experiencing a sense of familiarity and connection with Ricky Fang.       
+                                                                                         
+                                                                                         
+ The author is experiencing a high volume of activity and novelty.                       
+ The author is concerned about the potential for negative interactions with homeless     
+ people.                                                                                 
+ The author has met several people, including Enes Abdal, Guacomo, Johannes Brix, Nick   
+ Linck, Kevin Le, Jose Martinez, Kyle Jeong, Ricky Fang, Connor, Ryan, Caton, and James  
+ Fang.                                                                                   
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author has connections in San Jose, Mountain View, and potentially other locations. 
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author attended a hackathon.                                                        
+ The author is interested in rationalism and effective altruism.                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is interested in polygamy.                                                   
+                                                                                         
+ The author is interested in AI safety research.                                         
+                                                                                         
+                                                                                         
+ The author is considering dropping out of school.                                       
+                                                                                         
+ The author is 28 years old.                                                             
+                                                                                         
+ The author has met several people at AI safety labs and a rationalist group.            
+                                                                                         
+                                                                                         
+ The author's friend Ella Ricketts' brother is being nicer to her.                       
+ The author's friend Declan Gessel is interested in creating a co-working space.         
+                                                                                         
+ The author is interested in longevity biotech.                                          
+ The author is considering a trip and planning it at the library.                        
+ The author is considering a research leadership position.                               
+                                                                                         
+ The author is considering a co-working space in Paris.                                  
+ The author is aware of a trans woman named Paulie sleeping in the mixed dorm.           
+ The author interacted with several people including Jose Martinez, Ella Ricketts,       
+ Richard Ricky Fang, Claire Chen, Declan Gessel, James Fang, Julian Donahue, Giacomo,    
+ Lily, Paulie, and James Fang.                                                           
+ The author has a friend named Declan who is wealthy and owns a Tesla.                   
+ The author traveled to the city capitol and then to Menlo Park and Palo Alto.           
+                                                                                         
+ The author met an Italian man in San Francisco who is studying economics and working    
+ out to impress a girl.                                                                  
+                                                                                         
+                                                                                         
+                                                                                         
+ The author met a man named Matt Shams who is trying to make people smarter with         
+ personalized AI.                                                                        
+ The author met a man named Jacen who is an Anesthesialogist working at Stanford.        
+                                                                                         
+ The author met a Lithuanian woman in San Francisco.                                     
+                                                                                         
+                                                                                         
+ The author met Lily Gniedziejko, who is working remotely at Mueller and stacking her    
+ resume.                                                                                 
+                                                                                         
+ The author met Ge Moua and Mike Chrabaszcz at the AWS Builder Networking Event.         
+ The author is currently staying in a hostel.                                            
+ The author has a connection to Sanislaw Antol, who left California when the author was  
+ three years old.                                                                        
+ The author climbed at Movement Climbing Gym.                                            
+ The author walked 22,000 steps today.                                                   
+ The author met Mustafa Oz and Yuriy Podvysotskiy and his wife.                          
+                                                                                         
+                                                                                         
+ The author met Jim and James Fang at a hostel and a WorkOS event.                       
+                                                                                         
+                                                                                         
+ The author met Bob at ragie.ai.                                                         
+ The author met Alicia.                                                                  
+                                                                                         
+ The author learned line dancing with James Fang.                                        
+                                                                                         
+ The author wants to cut their hair every 12-ish weeks.                                  
+ The author prefers long hair in the front.                                              
+ The author is working on a personal website.                                            
+ The author is traveling to San Francisco from August 6th to August 19th.                
+                                                                                         
+ The author is currently in or near San Francisco.                                       
+                                                                                         
+ The author interacted with Jeremy's group of friends.                                   
+ The author attended a bonfire with colleagues.                                          
+                                                                                         
+ The author attempted to initiate conversation and flirtation.                           
+ The author woke up around 09:30.                                                        
+ The author is in contact with Sirihaasa Nallamothu and Jerry Lu.                        
+ The author is considering buying a new phone and laptop.                                
+ The author's mother was with them in the car.                                           
+                                                                                         
+ The author wrote letters to Ella Ricketts, Jerry Lu, and Zev McManus-Mendelowitz.       
+ The author worked at Epic.                                                              
+ The author went to Original Pancake House with Ryan and Kevin.                          
+ The author is currently working at Epic.                                                
+ The author had breakfast with Ryan Qu and Kevin Li.                                     
+                                                                                         
+ The author gave farewell letters to several colleagues.                                 
+                                                                                         
+ The author almost had an allergic reaction to pecans.                                   
+ The author PR'd 250 on bench press and climbed a 5.7 grade top balay and around a V2-3. 
+                                                                                         
+                                                                                         
+ Gavin Crigger flirted with the author.                                                  
+ The author worked on a video for Sirihaasa.                                             
+                                                                                         
+ The author met with Eric Dalva.                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author interacted with a man wearing a Garmin watch.                                
+                                                                                         
+                                                                                         
+                                                                                         
+ The author interacted with a man at the gym.                                            
+                                                                                         
+ The author interacted with Ella Ricketts.                                               
+ The author identified as a courageous person.                                           
+                                                                                         
+ The author had a 1:1 with Matthew Wiese.                                                
+                                                                                         
+ The author engaged in a conversation with a hostess at a dessert place.                 
+                                                                                         
+ The author has an intern buddy named [[Adyn Lavine]] and [[Patrick Gilles]]             
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author worked out and hit 210 on the bench press.                                   
+ The author woke up at approximately 7:50 AM.                                            
+ The author is working on a project.                                                     
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is working on GraphRag.                                                      
+                                                                                         
+ The author is using a 'second brain' system.                                            
+                                                                                         
+ The author is planning a trip to San Francisco.                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is participating in a Residency Delta program.                               
+                                                                                         
+                                                                                         
+ The author is friends with Jeremy Kintana and Siri Haas.                                
+                                                                                         
+ The author spoke with James Fang about the delta program.                               
+                                                                                         
+ The author is working on a residency project.                                           
+                                                                                         
+ The author is working a full-time job.                                                  
+                                                                                         
+ The author is named I/me.                                                               
+                                                                                         
+ The author is interested in software development.                                       
+                                                                                         
+ The author has connections with Ben Schattinger, Sam Burke, Ravan's friend, Alan Sokol, 
+ Hardeep, Nick, and Siri.                                                                
+                                                                                         
+                                                                                         
+                                                                                         
+ The author had a conversation with Seth Hain and recorded it.                           
+                                                                                         
+ The author asked for a disgusting drink at an arcade.                                   
+                                                                                         
+ The author's team won first place at the Chicago Startup Weekend.                       
+ The author's team was in a group of 5 teams.                                            
+ The author's mother drove them to the awards ceremony.                                  
+ The author woke up at around 8:15.                                                      
+ The author took the bus to Madison from Chicago.                                        
+ The author met a man on the train.                                                      
+ The author is considering using AI tools judiciously.                                   
+                                                                                         
+ The author is concerned about Ella's lack of response on WhatsApp.                      
+ The author interacted with Mikyla Farnell and gave her $50.                             
+ The author has previously formed strong friendships quickly and then lost touch.        
+                                                                                         
+                                                                                         
+ The author works.                                                                       
+ The author had a hangout with Ella Ricketts.                                            
+ The author experienced feelings of self-consciousness.                                  
+                                                                                         
+ The author woke up at 6 am and showered.                                                
+ The author is planning a trip to Chicago Startup Weekend.                               
+ The author is considering skipping work on Friday.                                      
+ The author has a meeting with Jessica.                                                  
+                                                                                         
+ The author is working on an article.                                                    
+ The author is involved with Maks and Eric and Adam.                                     
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is currently having a summer fling with Ella and Gavin.                      
+                                                                                         
+                                                                                         
+ The author is tracking various health metrics.                                          
+                                                                                         
+                                                                                         
+ The author is reviewing daily and weekly data.                                          
+                                                                                         
+ The author is planning a trip to San Francisco (SF).                                    
+                                                                                         
+ Seeking knowledge and understanding                                                     
+ Resilience and self-reliance                                                            
+                                                                                         
+ Making a difference                                                                     
+                                                                                         
+ Consciousness and self-improvement                                                      
+                                                                                         
+                                                                                         
+                                                                                         
+ Connection and empathy                                                                  
+                                                                                         
+ Becoming better                                                                         
+ Seeking fluency in Spanish.                                                             
+                                                                                         
+ Planning and time management.                                                           
+                                                                                         
+ Mortality is immoral.                                                                   
+                                                                                         
+                                                                                         
+ Maintaining relationships.                                                              
+                                                                                         
+ Deliberate and focused work.                                                            
+ Courage and stepping outside comfort zones.                                             
+                                                                                         
+ Continuous learning.                                                                    
+ Continuous learning and self-improvement.                                               
+ Consciousness and awareness of mortality.                                               
+                                                                                         
+ Vulnerability and Openness                                                              
+ Self-improvement                                                                        
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ Self-awareness and consciousness                                                        
+                                                                                         
+ Personal growth and improvement                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ Kindness and generosity                                                                 
+                                                                                         
+                                                                                         
+                                                                                         
+ Courage and stepping outside comfort zones                                              
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ Building meaningful relationships                                                       
+                                                                                         
+                                                                                         
+ Wealth                                                                                  
+                                                                                         
+ Relationships                                                                           
+                                                                                         
+ Learning                                                                                
+                                                                                         
+ Identity                                                                                
+                                                                                         
+ Health                                                                                  
+                                                                                         
+ Happiness                                                                               
+                                                                                         
+ Growth                                                                                  
+                                                                                         
+ Environment                                                                             
+                                                                                         
+ Courage                                                                                 
+                                                                                         
+ Connection                                                                              
+                                                                                         
+ Seeking advice                                                                          
+ Planning                                                                                
+                                                                                         
+ Making decisions                                                                        
+ Deliberate work                                                                         
+                                                                                         
+ Consciousness of death                                                                  
+                                                                                         
+ Connection with loved ones                                                              
+ Improve reactions to negative comments.                                                 
+ Consciousness                                                                           
+                                                                                         
+ Self-awareness                                                                          
+                                                                                         
+                                                                                         
+ Reducing Negative Bias                                                                  
+                                                                                         
+ Positive Interactions                                                                   
+ Improving Memory                                                                        
+                                                                                         
+                                                                                         
+ Continuous Learning                                                                     
+                                                                                         
+ Confidence                                                                              
+ Personal growth is valued.                                                              
+                                                                                         
+ Courageous action is important.                                                         
+ Selfishness (in a growth-oriented way)                                                  
+ Productivity                                                                            
+                                                                                         
+ Genuine connection and social interaction                                               
+                                                                                         
+ Embracing discomfort for personal growth                                                
+ Curiosity and observation                                                               
+ Rationality                                                                             
+                                                                                         
+                                                                                         
+ Playfulness                                                                             
+                                                                                         
+ High-quality schedule                                                                   
+ Authenticity                                                                            
+                                                                                         
+ Self-growth and investing in the future.                                                
+                                                                                         
+ Learning and self-improvement.                                                          
+ Deliberate and deep work.                                                               
+ Deliberate and deep work on goals is valued.                                            
+ Courageous action is valued.                                                            
+ Consciousness of death and meditation are valued.                                       
+ Consciousness and awareness of death.                                                   
+ Courageous action                                                                       
+                                                                                         
+                                                                                         
+                                                                                         
+ Connection with others                                                                  
+ Seeking comfort and support.                                                            
+ Importance of meaningful work.                                                          
+ Appreciation for friendship.                                                            
+                                                                                         
+ Focus on high-value activities.                                                         
+                                                                                         
+                                                                                         
+ Eliminating unnecessary tasks.                                                          
+ Continuous self-reflection and improvement.                                             
+ Intentionality and deliberate action.                                                   
+ Deliberate work on goals.                                                               
+ Courageous action.                                                                      
+ Continuous self-improvement.                                                            
+                                                                                         
+                                                                                         
+ Being present in the moment.                                                            
+ Focus on learning and automation                                                        
+ Discipline and focus                                                                    
+ Awareness of mortality                                                                  
+ The author values making a positive impact.                                             
+                                                                                         
+ The author values growth.                                                               
+                                                                                         
+ Health is a high priority.                                                              
+                                                                                         
+ Self-discipline                                                                         
+ Valueing reflection                                                                     
+ Making progress on a primary goal                                                       
+                                                                                         
+ Consistency                                                                             
+                                                                                         
+ Self-improvement.                                                                       
+ Reducing self-consciousness and vulnerability.                                          
+                                                                                         
+ Improving relationships.                                                                
+                                                                                         
+                                                                                         
+                                                                                         
+ Avoiding future losses                                                                  
+ Prioritization                                                                          
+                                                                                         
+ Self-control                                                                            
+                                                                                         
+ Seeking connection and friendship.                                                      
+                                                                                         
+ Personal growth and self-awareness.                                                     
+                                                                                         
+ Following a schedule and prioritizing tasks.                                            
+                                                                                         
+ Embracing new experiences.                                                              
+ Consciousness and awareness.                                                            
+ Avoiding unfinished tasks.                                                              
+                                                                                         
+ Systematic improvement of systems.                                                      
+                                                                                         
+ Ethical behavior and fairness.                                                          
+ The author values growth, health, identity, wealth, relationships, environment, and     
+ happiness.                                                                              
+ Rational thinking                                                                       
+ Continuous improvement of speaking abilities                                            
+                                                                                         
+ Proactive self-improvement                                                              
+                                                                                         
+                                                                                         
+ Efficiency and productivity                                                             
+ Avoiding passive social interaction                                                     
+                                                                                         
+                                                                                         
+ Sticking to routines.                                                                   
+ Consciousness and awareness                                                             
+ Alignment with future self.                                                             
+ Acting as if you will be successful.                                                    
+ Valueing connection with others.                                                        
+                                                                                         
+                                                                                         
+ Structure and routine                                                                   
+ Conscious awareness                                                                     
+ Appreciating and respecting others.                                                     
+ Systematic thinking                                                                     
+ Growth and learning                                                                     
+ Generosity                                                                              
+                                                                                         
+                                                                                         
+ Continuous improvement                                                                  
+ Connection and sharing                                                                  
+ Value of continuous learning and skill development.                                     
+                                                                                         
+ The author values their time.                                                           
+                                                                                         
+                                                                                         
+ The author values connection with others.                                               
+ Importance of building a strong community.                                              
+                                                                                         
+ Focus on personal growth and self-improvement.                                          
+                                                                                         
+ Value in maintaining and strengthening relationships.                                   
+                                                                                         
+ Importance of providing value to others.                                                
+ Desire for continuous learning and improvement.                                         
+                                                                                         
+                                                                                         
+ Valuing relationships and expressing care.                                              
+                                                                                         
+ Strategic thinking                                                                      
+                                                                                         
+ Seeking personal growth and self-awareness.                                             
+                                                                                         
+ Rejecting good opportunities                                                            
+ Desire for continuous learning.                                                         
+ Being mindful of death.                                                                 
+ Authentic conversation                                                                  
+ Value in meeting new people.                                                            
+ Seeking financial success through a startup.                                            
+                                                                                         
+ Interest in longevity and rationalism.                                                  
+                                                                                         
+ Honesty                                                                                 
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ Making a positive change on the world                                                   
+                                                                                         
+ Autonomy                                                                                
+                                                                                         
+ Value community.                                                                        
+                                                                                         
+ The author values personal growth and self-improvement.                                 
+                                                                                         
+ The author values experiences and connections with others.                              
+ Spreading love                                                                          
+ Reflection and self-assessment                                                          
+ Seeking opportunities for networking.                                                   
+                                                                                         
+                                                                                         
+ Overcoming fear of rejection.                                                           
+ Being friendly and initiating connections.                                              
+                                                                                         
+ Making connections with others                                                          
+                                                                                         
+ Long-term thinking                                                                      
+                                                                                         
+ Continuous self-improvement                                                             
+                                                                                         
+                                                                                         
+ Achieving goals                                                                         
+                                                                                         
+ Seeking high-quality relationships                                                      
+ Personal growth and self-improvement                                                    
+ Establishing a routine                                                                  
+ Systems thinking                                                                        
+                                                                                         
+ Self-awareness and emotional regulation                                                 
+                                                                                         
+                                                                                         
+ Problem-solving and rational thinking                                                   
+                                                                                         
+ Appreciation for relationships and memories                                             
+                                                                                         
+ Taking control of one's life                                                            
+ Social connection                                                                       
+                                                                                         
+ Intentionality                                                                          
+                                                                                         
+                                                                                         
+ Seeking connection and social acceptance                                                
+ Personal growth                                                                         
+                                                                                         
+                                                                                         
+ Optimality in thinking                                                                  
+ Growth and feedback are important.                                                      
+ Building and maintaining a strong network is valuable.                                  
+                                                                                         
+                                                                                         
+ Being a good friend                                                                     
+                                                                                         
+ Curiosity                                                                               
+ Appreciation                                                                            
+                                                                                         
+ Seeking knowledge                                                                       
+                                                                                         
+ Removing super normative stimuli.                                                       
+ Pleasing a woman                                                                        
+ Value of connection and relationships.                                                  
+                                                                                         
+ Importance of reading.                                                                  
+                                                                                         
+ Focus on deliberate work.                                                               
+ Self-acceptance                                                                         
+                                                                                         
+                                                                                         
+ Progress over perfection                                                                
+                                                                                         
+ Productivity linked to self-worth                                                       
+ Seeking deeper connections and relationships.                                           
+                                                                                         
+                                                                                         
+ Data-driven decision making and skepticism.                                             
+                                                                                         
+                                                                                         
+ Continuous learning and improvement.                                                    
+                                                                                         
+                                                                                         
+ Work deliberately on a goal                                                             
+                                                                                         
+ Start wind-down routine                                                                 
+ Plan my day                                                                             
+ Meditate for 5 minutes                                                                  
+ Learn for an hour                                                                       
+                                                                                         
+ Explore career opportunities with Daniel Ives, Daniel Burger, and Justin.               
+                                                                                         
+ Do something courageous                                                                 
+                                                                                         
+ Continue self-improvement efforts.                                                      
+ Move to San Francisco.                                                                  
+                                                                                         
+ Improve speech-to-text software.                                                        
+ Improve energy levels.                                                                  
+                                                                                         
+                                                                                         
+ Become conversationally fluent in Spanish.                                              
+                                                                                         
+ Achieve three important tasks tomorrow.                                                 
+ Work on systems                                                                         
+ Itemize tasks for courses, plan, and organize                                           
+ Incorporate self-awareness practices into daily life.                                   
+                                                                                         
+ Improve personal habits and routines.                                                   
+                                                                                         
+                                                                                         
+ Finish MP for CS527                                                                     
+ Expand social network and connect with like-minded individuals.                         
+ Develop a local-only goal refinement system.                                            
+                                                                                         
+ Complete the Residencies Delta program project.                                         
+                                                                                         
+ Pursue a relationship with Zoe Isabel Senon.                                            
+                                                                                         
+                                                                                         
+ Go on a date with a Spanish girl                                                        
+                                                                                         
+ Finish CS598JH project                                                                  
+ Create opportunities and learn automation for capital acquisition.                      
+                                                                                         
+ Wind-down routine                                                                       
+ Travel                                                                                  
+ Tomorrow's planning                                                                     
+ Planning the day                                                                        
+ Meditation                                                                              
+                                                                                         
+ Maintaining relationships                                                               
+                                                                                         
+ Learning                                                                                
+                                                                                         
+ Goal-oriented work                                                                      
+ Deep work on a goal                                                                     
+ Courageous action                                                                       
+                                                                                         
+ Connecting with others                                                                  
+ Career growth                                                                           
+ Work deliberately on a goal.                                                            
+                                                                                         
+ Start a wind-down routine.                                                              
+                                                                                         
+ Plan the next day.                                                                      
+ Meditate for 5 minutes.                                                                 
+ Learn something.                                                                        
+ Do something courageous.                                                                
+                                                                                         
+ Connect with someone.                                                                   
+ Understand and apply cognitive behavioral therapy.                                      
+ Improve awkward situation management.                                                   
+ Achieve physical fitness (similar to Ludwig).                                           
+ Increase Body Fat                                                                       
+ Improve Workflows                                                                       
+ Gain Value from Interactions                                                            
+                                                                                         
+ Achieve 3 Important Tasks Tomorrow                                                      
+ Plan/time block my day tomorrow.                                                        
+                                                                                         
+ Learn for an hour.                                                                      
+                                                                                         
+ Personal growth                                                                         
+ Learn Spanish                                                                           
+ Be productive.                                                                          
+ Adjust to a new time zone.                                                              
+ Prepare for the Longevity Biotech Fellowship                                            
+                                                                                         
+ Prepare for LBF                                                                         
+ Maintain a playful personality                                                          
+ Prepare for a trip to Spain.                                                            
+ Complete coursework.                                                                    
+                                                                                         
+ Complete a CS598 presentation.                                                          
+                                                                                         
+ Taking risks                                                                            
+ Structured learning                                                                     
+ Focused work                                                                            
+ Daily planning                                                                          
+ Prioritize important tasks.                                                             
+                                                                                         
+ Establish a consistent routine.                                                         
+ Make progress on independent study.                                                     
+                                                                                         
+ Improve capture/task management system.                                                 
+                                                                                         
+                                                                                         
+ Complete outstanding tasks.                                                             
+ Finish the capture system.                                                              
+ Improve capture system                                                                  
+ Implement a death awareness system                                                      
+ Go to bed earlier                                                                       
+ Plan the day                                                                            
+ Learn something                                                                         
+                                                                                         
+ Improve physical health.                                                                
+ Identify normative stimuli                                                              
+                                                                                         
+ Identify and pursue desired career paths.                                               
+                                                                                         
+ Complete schoolwork.                                                                    
+ Maintain a wind-down routine.                                                           
+ Complete a MP (Most Important Project)                                                  
+ Schedule a dentist appointment                                                          
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ Identify 3 companies to work at                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ Find full-time employment                                                               
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ Practice OODA loops.                                                                    
+                                                                                         
+ Learn from the bike accident                                                            
+ Increase schoolwork.                                                                    
+                                                                                         
+                                                                                         
+ Improve relationships.                                                                  
+                                                                                         
+                                                                                         
+                                                                                         
+ Avoid a concussion                                                                      
+                                                                                         
+ Apply rationality to decision-making                                                    
+                                                                                         
+ Solve overeating problem                                                                
+                                                                                         
+ Increase reflection skills                                                              
+                                                                                         
+ Increase productivity                                                                   
+                                                                                         
+ Improve apartment                                                                       
+ Establish a wind-down routine                                                           
+                                                                                         
+ Plan a trip.                                                                            
+                                                                                         
+ Improve scheduling and task management.                                                 
+                                                                                         
+ Improve English.                                                                        
+ Conduct a life audit.                                                                   
+ System Audit and Implementation                                                         
+                                                                                         
+                                                                                         
+ Improve Reflection System                                                               
+ Implement Weight Loss System                                                            
+ The author wants to identify and remove super normative stimuli.                        
+ The author wants to accomplish 3 important things tomorrow.                             
+ Identify what the author wants after graduation.                                        
+                                                                                         
+                                                                                         
+ Give more speeches                                                                      
+                                                                                         
+ Complete the independent study project.                                                 
+                                                                                         
+                                                                                         
+                                                                                         
+ Reduce phone usage.                                                                     
+                                                                                         
+                                                                                         
+ Implement a new room cleaning system.                                                   
+                                                                                         
+ Establish a consistent wake-up time.                                                    
+                                                                                         
+ Working on a growth system                                                              
+ Work on a growth system.                                                                
+ Improve productivity.                                                                   
+ Improve journaling and reflection.                                                      
+│ 2. Start my wind-down routine on time (before 22:00)                                   │                     │        1 │ 2025-08-25 │ /home/matth/Obsidian/Main/notes/dailies/2025-08-23.md                                  
+ Identify failure mode                                                                   
+ Be more strict with routines.                                                           
+ Work on growth system                                                                   
+ Maintain daily journaling                                                               
+ Improve small talk skills.                                                              
+                                                                                         
+ Improve meeting system                                                                  
+                                                                                         
+ Participate in Chicago Startup Weekend                                                  
+                                                                                         
+ Maintain a new schedule                                                                 
+ Improve growth systems                                                                  
+ Implement an essentialism system                                                        
+ Establish clarity in goals and intentions                                               
+ Create a feedback/reflection system                                                     
+ Apply for a scholarship                                                                 
+ The author wants to work deliberately on a goal.                                        
+ The author wants to review their day.                                                   
+ The author wants to remove normative stimuli.                                           
+ The author wants to meditate.                                                           
+ The author wants to learn.                                                              
+ The author wants to identify negative thinking patterns.                                
+ The author wants to establish a wind-down routine.                                      
+ The author wants to engage in courageous activities.                                    
+                                                                                         
+ The author wants to 'ping' someone.                                                     
+ Increase self-awareness and improve communication skills.                               
+                                                                                         
+                                                                                         
+ Develop a system for rating interactions with others.                                   
+                                                                                         
+ Create a habit of reflecting on daily experiences.                                      
+                                                                                         
+ Start a consulting business.                                                            
+                                                                                         
+ Improve the efficiency of the network management system.                                
+                                                                                         
+                                                                                         
+                                                                                         
+ Debug the Looki device.                                                                 
+                                                                                         
+                                                                                         
+ Send Nick Linck the article about relationships.                                        
+ Register for events in advance.                                                         
+                                                                                         
+ Reduce binge-watching                                                                   
+ Learn Spanish during the Spain trip.                                                    
+ Increase self-control                                                                   
+                                                                                         
+                                                                                         
+ Improve thinking processes                                                              
+ Improve the knowledge capture system.                                                   
+                                                                                         
+ Identify a super normative stimulus.                                                    
+ Complete CBT exercises.                                                                 
+ Work on a knowledge management system.                                                  
+ Remove a super normative stimulus.                                                      
+ Identify and address negative thinking patterns.                                        
+ Live a full and meaningful life                                                         
+ Learn new things                                                                        
+ Improve social skills and build connections.                                            
+                                                                                         
+ Improve social skills                                                                   
+ Explore opportunities in AI and related fields.                                         
+                                                                                         
+                                                                                         
+ Attend the hackathon and contribute to a team.                                          
+                                                                                         
+ Work on AI Safety research                                                              
+                                                                                         
+                                                                                         
+ Learn                                                                                   
+                                                                                         
+ Drop out of school                                                                      
+                                                                                         
+ Make connections with people.                                                           
+                                                                                         
+                                                                                         
+ The author wants to connect with people they met at the AWS Builder Networking Event.   
+                                                                                         
+ Connect with someone                                                                    
+ Complete CBT exercises                                                                  
+                                                                                         
+ Making new friends.                                                                     
+ Living in San Francisco.                                                                
+                                                                                         
+ Improving networking skills.                                                            
+                                                                                         
+                                                                                         
+ To get haircuts regularly.                                                              
+ Implement systems for growth                                                            
+                                                                                         
+ Connect with people                                                                     
+ Capture negative thoughts for CBT                                                       
+ Plan a trip                                                                             
+                                                                                         
+ Improve personal relationships                                                          
+ Develop a consistent routine                                                            
+ Step outside of comfort zone.                                                           
+ Remove unnecessary stimuli.                                                             
+ Reflect on the day's events.                                                            
+ Practice mindfulness and meditation.                                                    
+ Identify and challenge negative thinking patterns.                                      
+ Establish a wind-down routine.                                                          
+ Engage in learning.                                                                     
+ Develop systems in life                                                                 
+                                                                                         
+ Complete 3 important tasks tomorrow                                                     
+ Trip planning                                                                           
+ Review the day                                                                          
+                                                                                         
+ Remove super normative stimuli                                                          
+ Meditate                                                                                
+ Increase knowledge and understanding                                                    
+ Improve social skills and confidence                                                    
+                                                                                         
+ Establish a consistent routine                                                          
+ Network for trip assistance                                                             
+                                                                                         
+ Find free lodging in San Francisco.                                                     
+                                                                                         
+ Create a birthday video for Siri.                                                       
+ Complete video editing                                                                  
+ Book accommodation for a trip                                                           
+                                                                                         
+ Apply knowledge of asking for help.                                                     
+                                                                                         
+ Work on Residency Delta Idea                                                            
+ Residency Delta Idea Development                                                        
+ Post on Twitter.                                                                        
+ Pet Sitting in SF                                                                       
+ Networking for SF trip                                                                  
+ Find free lodging in SF.                                                                
+ Create a LinkedIn post about Chicago Startup Weekend.                                   
+ Contact people in network for SF trip help.                                             
+ Work deliberately, deeply on a goal.                                                    
+ Review the day.                                                                         
+ Improve daily reflection                                                                
+ Complete CBT exercise                                                                   
+ Be conscious of death                                                                   
+ Improve small talk and approaching people.                                              
+                                                                                         
+ Prepare hardware for returns.                                                           
+                                                                                         
+ Plan San Francisco trip.                                                                
+ Decide on Friday work schedule.                                                         
+ Create startup pitches.                                                                 
+ Complete the article                                                                    
+                                                                                         
+ Apply to the scholarship                                                                
+ Explore cutting-edge domains.                                                           
+                                                                                         
+ Align weekly activities with monthly/quarterly ambitions.                               
+                                                                                         
+ Achieve personal, professional, and health-related victories.                           
+                                                                                         
+ Loneliness can be a significant emotional experience.                                   
+ Death is a significant concern.                                                         
+ Aging can be mitigated through technology.                                              
+ Treatments for aging will become more accessible.                                       
+ Nanobots could make people incredibly cheap to produce.                                 
+                                                                                         
+ Mortality is a fundamental right.                                                       
+                                                                                         
+                                                                                         
+ Individuals operate on different levels of maturity and intellect.                      
+                                                                                         
+                                                                                         
+ Government should subsidize aging treatments.                                           
+                                                                                         
+ Aging is a significant issue to address.                                                
+ The author believes in the potential for exponential personal growth.                   
+                                                                                         
+                                                                                         
+ Supernormative stimuli can be removed.                                                  
+ Self-awareness is valuable.                                                             
+                                                                                         
+ Negative thinking patterns can be addressed through CBT.                                
+ Fear can hinder progress.                                                               
+                                                                                         
+ Death is a reality to be considered.                                                    
+ Touch can be a form of manipulation.                                                    
+ Remote work is a viable option.                                                         
+                                                                                         
+ Rationality and efficiency are valuable.                                                
+ People are interested in longevity and potentially organ replacement.                   
+                                                                                         
+                                                                                         
+ Self-improvement is important                                                           
+                                                                                         
+ Growth is important                                                                     
+                                                                                         
+ 10% body fat is optimal for health                                                      
+                                                                                         
+ Insecurity is a negative trait.                                                         
+ Gene therapy can be used to enhance protein production.                                 
+                                                                                         
+ Communication barriers exist when interacting with non-technical people.                
+ Randomness in the World                                                                 
+ People are judged by how they make others feel.                                         
+                                                                                         
+                                                                                         
+ Bias is detrimental                                                                     
+                                                                                         
+ Awareness of death is relevant.                                                         
+ Social pressure is not a significant deterrent to growth.                               
+                                                                                         
+ Observation and imitation can facilitate learning.                                      
+                                                                                         
+ Cognitive Behavioral Therapy is useful.                                                 
+ Time is valuable and should be managed carefully.                                       
+                                                                                         
+ Cognitive distortions exist                                                             
+ People are genuinely kind and want to help.                                             
+                                                                                         
+                                                                                         
+ Mind reading is a cognitive distortion.                                                 
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ Future telling is a cognitive distortion.                                               
+                                                                                         
+                                                                                         
+ Emotions should inform reasoning, but not dictate actions.                              
+                                                                                         
+                                                                                         
+                                                                                         
+ Catastrophizing is a cognitive distortion.                                              
+                                                                                         
+                                                                                         
+                                                                                         
+ Cognitive distortions negatively impact behavior.                                       
+                                                                                         
+ Productivity can be significantly increased.                                            
+ Lectures are not always maximally effective.                                            
+                                                                                         
+ Stress is a sign of a lack of a system.                                                 
+ Ideas are easier to come up with when not distracted.                                   
+ The author's productivity is overestimated.                                             
+ The author believes in the value of exploration and deeper understanding.               
+                                                                                         
+ Health is paramount to well-being.                                                      
+ Rationalism is valuable.                                                                
+ Cognitive distortions are a problem.                                                    
+ Small losses can accumulate to significant harm.                                        
+ Self-consciousness can be reduced.                                                      
+                                                                                         
+ Reading is beneficial.                                                                  
+                                                                                         
+ People are not always rational.                                                         
+                                                                                         
+ Falling off a bike can lead to serious consequences.                                    
+                                                                                         
+ Psychological problems can be solved.                                                   
+ Cognitive distortions are harmful.                                                      
+                                                                                         
+ Self-reflection is important.                                                           
+ Cognitive distortions can be addressed.                                                 
+                                                                                         
+ People are generally reasonable.                                                        
+ Rationalism is beneficial.                                                              
+ Polyamory is an interesting topic.                                                      
+                                                                                         
+                                                                                         
+ Reflection and data analysis are important.                                             
+ Learning from books is valuable.                                                        
+                                                                                         
+ Exploration and experimentation are beneficial.                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ Energy has inherent qualities.                                                          
+                                                                                         
+                                                                                         
+ Cognitive distortions are problematic.                                                  
+ Acting as if you will be successful is a valid strategy.                                
+ Self-awareness is crucial.                                                              
+ Life is finite and precious.                                                            
+                                                                                         
+ Experiences are inherently absurd.                                                      
+                                                                                         
+ Cognitive distortions are problematic                                                   
+ Systemic problems are more important than individual failings.                          
+ Privacy is not inherently valuable.                                                     
+                                                                                         
+                                                                                         
+ People's thoughts are not always accurate reflections of reality.                       
+                                                                                         
+ Overgeneralization is a cognitive distortion.                                           
+                                                                                         
+ The author believes that time is valuable.                                              
+                                                                                         
+                                                                                         
+ The author believes that knowledge is important.                                        
+                                                                                         
+                                                                                         
+ The author believes that emotional reasoning is a problem.                              
+                                                                                         
+ Systemic change is necessary for societal improvement.                                  
+                                                                                         
+ Soul drift is a potential danger of companies.                                          
+                                                                                         
+                                                                                         
+ The value of networking and connection.                                                 
+ Recording and documenting experiences for future reference.                             
+ Recognizing and addressing irrational tendencies in others.                             
+                                                                                         
+ Understanding second-order consequences is important                                    
+                                                                                         
+ Develop a system for intentionality.                                                    
+ Strategic thinking is crucial for personal success.                                     
+                                                                                         
+ Relationships are important.                                                            
+                                                                                         
+ Personal belief shapes reality.                                                         
+ People are often kind and generous.                                                     
+ Labels can be limiting and should be flexible.                                          
+                                                                                         
+                                                                                         
+ Dopamine numbs pain                                                                     
+                                                                                         
+                                                                                         
+ Delaying gratification is beneficial                                                    
+                                                                                         
+                                                                                         
+ Value in rationalism and data-driven decision making.                                   
+                                                                                         
+ Factory farming is cruel.                                                               
+ Belief in the potential for spiritual growth.                                           
+ Social interaction and connection are important.                                        
+                                                                                         
+                                                                                         
+                                                                                         
+ Self-awareness and reflection are valuable.                                             
+                                                                                         
+ People are important                                                                    
+                                                                                         
+ Honesty is preferable to deception                                                      
+                                                                                         
+ Helping others is a worthwhile endeavor                                                 
+ Transhumanism aligns with rationalist values.                                           
+ Rationalists are less emotional than others.                                            
+                                                                                         
+                                                                                         
+                                                                                         
+ Emergent misalignment is important.                                                     
+                                                                                         
+                                                                                         
+ Cognitive distortions are important to identify.                                        
+ Technique is more important than brute strength in climbing                             
+ People are capable of kindness                                                          
+ Success is accessible with effort.                                                      
+ People are generally kind.                                                              
+ The value of conversations                                                              
+ The importance of reflection                                                            
+ The importance of a supportive partner                                                  
+                                                                                         
+ The author is currently struggling with feelings of inadequacy.                         
+                                                                                         
+ People often overestimate their compatibility with friends.                             
+                                                                                         
+                                                                                         
+ Ella Ricketts is exceptionally high quality.                                            
+                                                                                         
+ Systems should be designed for the worst-case self.                                     
+                                                                                         
+ Relationships are important and can be difficult.                                       
+                                                                                         
+ Emotional reactions can be managed.                                                     
+                                                                                         
+ Relationships are important                                                             
+                                                                                         
+ Positive feedback is valued                                                             
+                                                                                         
+ People remember how you feel, not what you say.                                         
+                                                                                         
+ Cognitive distortions are harmful and can be challenged                                 
+                                                                                         
+                                                                                         
+ Mental models improve intelligence                                                      
+                                                                                         
+ Learning and active recall are beneficial.                                              
+                                                                                         
+                                                                                         
+ Cognitive distortions are a problem to address.                                         
+ Similarities between excessive YouTube watching and procrastination.                    
+                                                                                         
+                                                                                         
+ Potential exists.                                                                       
+                                                                                         
+ Knowledge is valuable.                                                                  
+                                                                                         
+ Friendships can be fleeting.                                                            
+                                                                                         
+ Trust is difficult for others.                                                          
+ Self-esteem is linked to entertainment.                                                 
+                                                                                         
+ Social connections contribute to happiness                                              
+ Negative thoughts indicate a lack of effort                                             
+                                                                                         
+                                                                                         
+ Transparency and rapid information flow accelerate progress.                            
+                                                                                         
+                                                                                         
+ Small, iterative experiments are more effective than grand plans.                       
+                                                                                         
+ Conflict can be an opportunity for growth and connection.                               
+                                                                                         
+                                                                                         
+ reflective                                                                              
+                                                                                         
+ intentional                                                                             
+                                                                                         
+ empathetic                                                                              
+                                                                                         
+ curious                                                                                 
+                                                                                         
+                                                                                         
+ Motivated                                                                               
+                                                                                         
+ Strategic                                                                               
+                                                                                         
+ Pragmatic                                                                               
+ Obsessive (regarding Zoe)                                                               
+ Driven                                                                                  
+                                                                                         
+                                                                                         
+ Analytical                                                                              
+                                                                                         
+                                                                                         
+ Self-conscious                                                                          
+                                                                                         
+                                                                                         
+                                                                                         
+ Self-aware                                                                              
+                                                                                         
+                                                                                         
+ Confident                                                                               
+                                                                                         
+ Open-minded                                                                             
+                                                                                         
+                                                                                         
+ Observant                                                                               
+                                                                                         
+ Aware                                                                                   
+                                                                                         
+ seeking help                                                                            
+ Goal-oriented                                                                           
+                                                                                         
+ Receptive to cultural diversity                                                         
+ Envious                                                                                 
+ Awkward                                                                                 
+                                                                                         
+ Self-critical                                                                           
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ Cautious                                                                                
+                                                                                         
+ Tired                                                                                   
+ Ambitious                                                                               
+                                                                                         
+                                                                                         
+                                                                                         
+ Playful                                                                                 
+ Patient                                                                                 
+ Reflective.                                                                             
+                                                                                         
+ Proactive.                                                                              
+ Playful.                                                                                
+ Empathetic.                                                                             
+ Aware.                                                                                  
+ Concerned about others' well-being.                                                     
+                                                                                         
+ Productive                                                                              
+                                                                                         
+ Disciplined                                                                             
+                                                                                         
+ Responsible                                                                             
+ Organized                                                                               
+                                                                                         
+ Persistent.                                                                             
+ Curious.                                                                                
+ Proactive                                                                               
+                                                                                         
+ Open to new experiences                                                                 
+                                                                                         
+ The author is reflective and analytical.                                                
+ Concerned about future self.                                                            
+ discomfort in my gut                                                │                                         │        1 │ 2025-08-25 │ /home/matth/Obsidian/Main/notes/dailies/2025-08-25.md                                   │ I feel just like 
+ Anxious                                                                                 
+                                                                                         
+ Nice                                                                                    
+ Generous                                                                                
+                                                                                         
+ The author is reflective.                                                               
+                                                                                         
+ The author is organized.                                                                
+ The author is empathetic.                                                               
+ Detail-oriented                                                                         
+                                                                                         
+                                                                                         
+ Self-reflective                                                                         
+                                                                                         
+ Prone to overthinking                                                                   
+ Concerned about expectations.                                                           
+                                                                                         
+ Socially aware                                                                          
+ Creative                                                                                
+                                                                                         
+ Inquisitive                                                                             
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is reflective and introspective.                                             
+                                                                                         
+ The author is curious and observant.                                                    
+                                                                                         
+ Reserved                                                                                
+ Social                                                                                  
+                                                                                         
+│
+ Open to feedback                                                                        
+                                                                                         
+                                                                                         
+ Emotional                                                                               
+                                                                                         
+ Thoughtful                                                                              
+ Open to romance                                                                         
+ Friendly                                                                                
+ Engaging                                                                                
+                                                                                         
+ Aware of personal limitations                                                           
+                                                                                         
+                                                                                         
+                                                                                         
+ Elated                                                                                  
+ Disappointed                                                                            
+                                                                                         
+ Humorous                                                                                
+ loneliness                                                                              
+                                                                                         
+ hope                                                                                    
+                                                                                         
+ curiosity                                                                               
+                                                                                         
+ concern                                                                                 
+                                                                                         
+ Motivation                                                                              
+                                                                                         
+ Satisfaction (with improvements to speech-to-text software)                             
+ Sadness                                                                                 
+                                                                                         
+                                                                                         
+                                                                                         
+ Regret                                                                                  
+                                                                                         
+ Perhaps a touch of loneliness or longing (implied by thinking about Zoe)                
+ Interest (regarding Zoe)                                                                
+ Frustration (with his mother's inability to understand)                                 
+ Executives are interesting.                                                             
+                                                                                         
+ Excitement (regarding potential moves and opportunities)                                
+ Peace                                                                                   
+ Love                                                                                    
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ Happiness                                                                               
+                                                                                         
+                                                                                         
+                                                                                         
+ Gratitude                                                                               
+                                                                                         
+ Frustration                                                                             
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ Awkwardness                                                                             
+                                                                                         
+ Nervousness                                                                             
+                                                                                         
+ Interest                                                                                
+                                                                                         
+                                                                                         
+ Confidence                                                                              
+                                                                                         
+                                                                                         
+                                                                                         
+ uncertainty                                                                             
+                                                                                         
+ Disappointment/Negative Impression                                                      
+ Envy                                                                                    
+ Disgust                                                                                 
+                                                                                         
+ Concern about potential failure.                                                        
+ Shame                                                                                   
+                                                                                         
+ Excitement                                                                              
+                                                                                         
+ Sadness.                                                                                
+                                                                                         
+                                                                                         
+ Playfulness.                                                                            
+ Happiness.                                                                              
+                                                                                         
+                                                                                         
+ Frustration.                                                                            
+                                                                                         
+ Satisfaction (with productive days)                                                     
+ Frustration (with current productivity)                                                 
+                                                                                         
+ Stress                                                                                  
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ Hesitation                                                                              
+ Uncomfortable                                                                           
+ Restlessness                                                                            
+                                                                                         
+ Embarrassment                                                                           
+                                                                                         
+                                                                                         
+ Pride                                                                                   
+                                                                                         
+ Contentment                                                                             
+                                                                                         
+ Fear                                                                                    
+                                                                                         
+ Anxiety/Concern                                                                         
+                                                                                         
+                                                                                         
+ The author is concerned about negative thinking patterns.                               
+ Tiredness                                                                               
+                                                                                         
+ Mental tiredness and numbing                                                            
+ Concern.                                                                                
+ Bad mood.                                                                               
+ Disconnected                                                                            
+ Ashamed                                                                                 
+                                                                                         
+ The author feels shame.                                                                 
+                                                                                         
+ The author feels pity.                                                                  
+ The author feels appreciation.                                                          
+ Disappointment                                                                          
+                                                                                         
+                                                                                         
+                                                                                         
+ Stressed                                                                                
+ Sadness/Empathy                                                                         
+ Low energy                                                                              
+ Anxiety                                                                                 
+                                                                                         
+ Shyness                                                                                 
+                                                                                         
+                                                                                         
+ Inferiority                                                                             
+                                                                                         
+ The author felt a sense of connection with the people they met.                         
+ The author expressed frustration with the hostel's conditions.                          
+                                                                                         
+ Reflection                                                                              
+                                                                                         
+ Annoyance                                                                               
+ Hopefulness                                                                             
+ Relief                                                                                  
+ Masculine                                                                               
+                                                                                         
+ Flirtatious                                                                             
+ Confident                                                                               
+                                                                                         
+ Overwhelmed                                                                             
+                                                                                         
+ Motivated                                                                               
+ Insecurity                                                                              
+                                                                                         
+ Missing someone                                                                         
+ Unhappiness                                                                             
+ Frustration/Struggle                                                                    
+                                                                                         
+                                                                                         
+                                                                                         
+ Validation                                                                              
+                                                                                         
+ Pain                                                                                    
+                                                                                         
+ Elation                                                                                 
+ Potential anxiety (related to social connection)                                        
+                                                                                         
+                                                                                         
+ Frustration (with inefficiencies)                                                       
+                                                                                         
+                                                                                         
+ Using CBT to analyze thoughts.                                                          
+ The author is interested in the intersection of technology, aging, and consciousness.   
+ The author is actively seeking advice and guidance from others.                         
+ The author is concerned about the cost of future aging treatments.                      
+                                                                                         
+                                                                                         
+ The author is actively using CBT techniques to analyze his thoughts.                    
+ He is prioritizing learning and self-improvement through deliberate habits.             
+ He is grappling with the ethical implications of longevity and the potential for cheap  
+ reproduction.                                                                           
+ The author values quality relationships and distinguishes between different types of    
+ friendships.                                                                            
+                                                                                         
+                                                                                         
+ The author values connection and genuine friendship.                                    
+                                                                                         
+                                                                                         
+ The author struggles with procrastination and self-sabotage.                            
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author recognizes the importance of external stimulation and the benefits of        
+ disconnecting to cultivate inner peace.                                                 
+ There is a strong community of young professionals interested in remote work and        
+ longevity in Madrid.                                                                    
+                                                                                         
+ The author is using a CBT framework to analyze their thoughts.                          
+ The author is actively seeking ways to improve their life through strategic actions and 
+ learning.                                                                               
+ People are interested in entrepreneurship and digital nomadism.                         
+                                                                                         
+                                                                                         
+                                                                                         
+ Utilizing CBT techniques for thought analysis.                                          
+                                                                                         
+ Use of CBT                                                                              
+ The author is using CBT to analyze their thoughts.                                      
+ Focus on daily reflection and self-assessment.                                          
+                                                                                         
+ Awareness of cognitive distortions.                                                     
+ The potential for significant advancements through gene therapy.                        
+                                                                                         
+ The importance of clear communication, especially with non-technical individuals.       
+ Value of Reflection                                                                     
+                                                                                         
+                      │        1 │ 2025-09-25 │ /home/matth/Obsidian/Main/notes/dailies/2025-09-25.md                                   │ His advice is to increase your "luck surface area" by having high agency and doing a   │
+                                                                                         
+ The author is using CBT techniques to challenge negative thoughts.                      
+                                                                                         
+ The author is using a structured approach to daily planning and reflection.             
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is intrigued by the cultural differences observed in Spain.                  
+ The author is impressed by the affectionate nature of Spanish women.                    
+ The author finds the narrow streets of the city appealing.                              
+ The author is struggling with the time commitment of a large project.                   
+ The author is experiencing a bittersweet farewell with a friend.                        
+ The author is actively working on self-awareness and cognitive distortions.             
+ The author struggles with procrastination and time management.                          
+ The author is hyper-aware of their own cognitive distortions.                           
+ The author is actively working to understand and correct their cognitive distortions.   
+ Systematic self-assessment                                                              
+                                                                                         
+ Cognitive restructuring                                                                 
+ Difficulty in focusing on important tasks.                                              
+                                                                                         
+ The author is actively experimenting with different productivity techniques.            
+                                                                                         
+ The author recognizes the importance of self-reflection for growth.                     
+                                                                                         
+                                                                                         
+ The author struggles with distraction and prioritizing tasks.                           
+ The author is experimenting with using LLMs to automate tasks.                          
+ The author is using CBT techniques to address negative thinking.                        
+ The author is planning and prioritizing tasks for the next day.                         
+ The author is actively engaged in CBT exercises.                                        
+                                                                                         
+ The author struggles with procrastination and feeling unproductive.                     
+                                                                                         
+ The author is aware of their own cognitive biases and is attempting to address them     
+ through CBT.                                                                            
+ The author is actively experimenting with different tools and techniques for knowledge  
+ management.                                                                             
+ The author is experimenting with different communication methods.                       
+                                                                                         
+ The author is experiencing a shift in their reading ability after an injury.            
+                                                                                         
+ The author is engaging in a structured thought experiment to improve their              
+ decision-making.                                                                        
+ The author is attempting to quantify the probability of future accidents and their      
+ potential impact.                                                                       
+ The author is actively engaging in CBT techniques.                                      
+ The author is actively engaging in a self-improvement process.                          
+ The author is interested in self-improvement and personal development.                  
+                                                                                         
+ The author is actively working on identifying and challenging negative thought          
+ patterns.                                                                               
+ The author is actively working on identifying and challenging cognitive distortions.    
+                                                                                         
+                                                                                         
+ The author is aware of and attempting to mitigate cognitive distortions.                
+                                                                                         
+ The author is actively working on structuring his reflection process.                   
+ The author is trying to balance personal growth with practical goals.                   
+                                                                                         
+ The author is actively working on cognitive behavioral therapy techniques.              
+                                                                                         
+ The importance of breaking habits.                                                      
+                                                                                         
+ The author is using CBT techniques.                                                     
+ The author is trying to establish a system for self-improvement.                        
+                                                                                         
+ The author is engaged in CBT exercises.                                                 
+                                                                                         
+ The author is considering the long-term implications of their actions.                  
+                                                                                         
+ The author is attempting to identify and challenge cognitive distortions.               
+                                                                                         
+ The author is actively experimenting with strategies to improve their daily routine and 
+ productivity.                                                                           
+ Cognitive distortions are present.                                                      
+                                                                                         
+ The value of sharing experiences and connecting with others.                            
+ The potential for self-reflection to drive personal growth.                             
+ The importance of recognizing systemic issues rather than blaming individuals.          
+ The author values positive interactions with colleagues.                                
+ The author is actively working on identifying and correcting cognitive distortions.     
+ The potential for technology to enhance human capabilities.                             
+                                                                                         
+ The importance of mentorship and learning from those ahead.                             
+                                                                                         
+ The author is concerned about the value of their time compared to the cost of travel.   
+                                                                                         
+                                                                                         
+ The author is experimenting with a system for managing and leveraging their network,    
+ including the use of speech-to-text and video messaging.                                
+                                                                                         
+                                                                                         
+ The author is actively seeking ways to provide value to their network through various   
+ methods, including sharing resources and documenting experiences.                       
+ The author struggles with impulsive behavior and seeks to understand the underlying     
+ causes.                                                                                 
+ The author struggles with assuming negative outcomes in interactions.                   
+ The author is using a CBT-inspired approach to analyze their thoughts and behaviors.    
+                                                                                         
+ The author is interested in applying strategic thinking to life.                        
+                                                                                         
+ The author is experimenting with journaling as a data capture system.                   
+ The author is actively working on changing their mindset and behaviors.                 
+ The author struggles with overestimating their impact on others.                        
+ The author is actively working on self-improvement through CBT and mindfulness.         
+                                                                                         
+ The author is struggling with internal conflict and self-doubt.                         
+                                                                                         
+ The author is influenced by the people they meet and tries to adapt to their energy.    
+                                                                                         
+ The author is experiencing a sense of overwhelm and needing to prioritize.              
+ The author is attempting to create a new identity and personal brand.                   
+ The author is actively working on improving their social skills and self-awareness.     
+                                                                                         
+ The potential for AI to cause misalignment.                                             
+                                                                                         
+ The potential for AI to cause misalignment.                                             
+                                                                                         
+                                                                                         
+ The importance of community and shared values.                                          
+ The author observed that seemingly unfriendly people can be kind.                       
+                                                                                         
+ The author is actively working on self-improvement through CBT and reflection.          
+                                                                                         
+ The author is self-aware and willing to reflect on their behavior and motivations.      
+ The author is experimenting with different approaches to networking and social          
+ interaction.                                                                            
+ The author is actively seeking social connections and opportunities for personal and    
+ professional growth.                                                                    
+ The author wants the stylist to understand their preferences.                           
+ The author is interested in self-improvement and personal growth.                       
+                                                                                         
+ The author is actively experimenting with different systems and methodologies.          
+                                                                                         
+ The author is actively working on self-improvement through CBT.                         
+                                                                                         
+ The author is using cognitive distortions, specifically focusing on the 'should'        
+ statement.                                                                              
+ The author is considering a long-term relationship with Ella Ricketts, despite          
+ recognizing a potential mismatch in quality.                                            
+                                                                                         
+ The author values memories and relationships.                                           
+                                                                                         
+ The author is actively working on self-improvement through CBT and systems thinking.    
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is actively working on self-awareness and emotional regulation.              
+                                                                                         
+                                                                                         
+ The author is reflecting on a positive interaction and its impact on their              
+ self-perception.                                                                        
+ The author is consciously trying to reduce their reliance on their smartphone.          
+ The author is actively working on applying principles from 'The Fine Art of Small Talk' 
+ and 'Never Eat Alone'.                                                                  
+ The author is actively engaged in self-improvement through CBT and habit tracking.      
+                                                                                         
+                                                                                         
+ The author is struggling with overeating and needs to practice mindful eating.          
+                                                                                         
+                                                                                         
+                                                                                         
+ The author is considering shifting their learning system focus.                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+ Importance of systems for growth                                                        
+                                                                                         
+ The author is struggling with time management and self-control.                         
+                                                                                         
+ The author is experimenting with Zettelkasten.                                          
+ The author is considering a CRM relationship system.                                    
+ The author is actively using CBT techniques.                                            
+ The author is actively trying to manage the potential for quickly formed and then lost  
+ friendships.                                                                            
+ The author is using CBT to address negative thinking.                                   
+ The author is practicing mindfulness through meditation.                                
+ The author is consciously practicing CBT techniques by identifying and challenging      
+ negative thinking patterns.                                                             
+ The author is actively using Zettlekasten and GPT to aid their writing process.         
+ The value of routine and predictability for learning.                                   
+                                                                                          
+ The importance of deliberate practice and breaking down complex skills.                 
