@@ -42,7 +42,7 @@ class ContextMCPServer:
             embedding_device=embedding_device,
         )
         self._auth = auth
-        self._mcp = FastMCP(name=server_name, auth=auth, expose_oauth_config=True)
+        self._mcp = FastMCP(name=server_name, auth=auth)
         self._register_tools()
 
     def _register_tools(self) -> None:
