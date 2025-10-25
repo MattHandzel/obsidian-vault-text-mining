@@ -24,7 +24,6 @@ PROFILE_SCHEMA = {
             "required": [
                 "id",
                 "title",
-                "summary",
                 "domain",
                 "tags",
                 "embedding",

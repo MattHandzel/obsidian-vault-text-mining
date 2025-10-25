@@ -7,6 +7,7 @@ from typing import Any, Dict, List, Optional
 
 from fastmcp.server.auth import OAuthProxy
 from fastmcp.server.auth.providers.jwt import JWTVerifier
+from fastmcp.server.auth.providers.google import GoogleProvider
 
 
 @dataclass
@@ -31,6 +32,19 @@ class OAuthProxySettings:
     valid_scopes: Optional[List[str]] = None
 
 
+@dataclass
+class GoogleAuthSettings:
+    """Settings required to instantiate a GoogleProvider."""
+
+    client_id: str
+    client_secret: str
+    base_url: str
+    redirect_path: Optional[str] = None
+    required_scopes: Optional[List[str]] = None
+    timeout_seconds: Optional[int] = None
+    allowed_client_redirect_uris: Optional[List[str]] = None
+
+
 def build_oauth_proxy(settings: OAuthProxySettings) -> OAuthProxy:
     """Create an OAuthProxy instance wired for the configured provider."""
 
@@ -52,7 +66,9 @@ def build_oauth_proxy(settings: OAuthProxySettings) -> OAuthProxy:
     if settings.redirect_path:
         proxy_kwargs["redirect_path"] = settings.redirect_path
     if settings.allowed_client_redirect_uris is not None:
-        proxy_kwargs["allowed_client_redirect_uris"] = settings.allowed_client_redirect_uris
+        proxy_kwargs["allowed_client_redirect_uris"] = (
+            settings.allowed_client_redirect_uris
+        )
     if settings.valid_scopes is not None:
         proxy_kwargs["valid_scopes"] = settings.valid_scopes
     if not settings.forward_pkce:
@@ -72,3 +88,22 @@ def build_oauth_proxy(settings: OAuthProxySettings) -> OAuthProxy:
         **proxy_kwargs,
     )
 
+
+def build_google_provider(settings: GoogleAuthSettings) -> GoogleProvider:
+    """Create a GoogleProvider instance configured for the context server."""
+
+    provider_kwargs: Dict[str, Any] = {
+        "client_id": settings.client_id,
+        "client_secret": settings.client_secret,
+        "base_url": settings.base_url,
+    }
+    if settings.redirect_path:
+        provider_kwargs["redirect_path"] = settings.redirect_path
+    if settings.required_scopes:
+        provider_kwargs["required_scopes"] = settings.required_scopes
+    if settings.timeout_seconds is not None:
+        provider_kwargs["timeout_seconds"] = settings.timeout_seconds
+    if settings.allowed_client_redirect_uris:
+        provider_kwargs["allowed_client_redirect_uris"] = settings.allowed_client_redirect_uris
+
+    return GoogleProvider(**provider_kwargs)

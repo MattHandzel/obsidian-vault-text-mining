@@ -45,6 +45,11 @@ def build_profile_database(
             if isinstance(governance, list):
                 tags.extend(str(value).strip() for value in governance if str(value).strip())
             evidence = item.get("evidence") or []
+            # Compose a human-readable details string from evidence items.
+            if isinstance(evidence, list):
+                evidence_text = "\n".join(str(ev).strip() for ev in evidence if str(ev).strip())
+            else:
+                evidence_text = str(evidence).strip()
             attributes: Dict[str, object] = {
                 "mentions": item.get("mentions", 1),
                 "evidence": evidence,
@@ -53,11 +58,12 @@ def build_profile_database(
             lower_tags = {tag.lower() for tag in tags}
             if {"private", "personal", "medical"}.intersection(lower_tags):
                 sensitivity_level = "personal"
-            fact = {
+            fact: Dict[str, object] = {
                 "id": fact_id,
                 "title": text.split(". ")[0][:120] or text[:120],
-                "summary": text,
-                "details": summary,
+                # Summary intentionally omitted in v1; the fact text is captured in title.
+                # Downstream loader tolerates missing summary.
+                "details": evidence_text,
                 "domain": bucket,
                 "tags": list(dict.fromkeys(tags)),
                 "sensitivity": {"level": sensitivity_level, "reasons": list(lower_tags)},
